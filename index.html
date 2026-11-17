@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#14233c">
+<title>على أعتاب التوفل | Threshold</title>
+<meta name="description" content="اختبار تجريبي كامل لتقييم مستواك في اللغة الإنجليزية: قراءة، استماع، كتابة، محادثة — Dahshan Soft">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Threshold">
+<style>
+:root{--navy:#14233c;--navy2:#1f3557;--gold:#d4a843;--teal:#0f7c8c;--bg:#f3f5f8;--line:#d9dee6;--txt:#1d2733;--ok:#1f9d55;--bad:#d64545}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+.hidden{display:none!important}
+button{font-family:inherit}
+/* ===== HOME ===== */
+.page{min-height:100vh;background:linear-gradient(160deg,#0b1628,#1f3557 60%,#2c4a75);color:#fff;padding:22px 16px 40px}
+.wrap{max-width:760px;margin:auto}
+.brand{text-align:center;margin:8px 0 22px}
+.logo{width:96px;height:96px;border-radius:26px;margin:auto;background:linear-gradient(135deg,var(--gold),#f3d98b);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.logo svg{width:62px;height:62px}
+h1{font-size:30px;margin-top:14px}
+.en{font-family:Georgia,serif;letter-spacing:4px;color:var(--gold);font-size:15px;margin-top:4px}
+.sub{opacity:.82;font-size:14px;margin-top:10px;line-height:1.8}
+.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:16px;margin-bottom:14px}
+.card h3{font-size:16px;margin-bottom:10px;color:var(--gold)}
+.big{display:block;width:100%;padding:18px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--gold),#ecc96f);color:#1b2433;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(212,168,67,.35)}
+.big small{display:block;font-size:12px;font-weight:600;opacity:.75;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sbtn{padding:14px 10px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;font-size:15px;text-align:center}
+.sbtn b{display:block;font-size:24px;margin-bottom:4px}
+.sbtn small{display:block;opacity:.7;font-size:12px;margin-top:3px}
+.sbtn:active,.big:active{transform:scale(.98)}
+.row{display:flex;gap:10px}
+.forms{display:flex;gap:8px;margin-bottom:14px}
+.fchip{flex:1;padding:11px 4px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:14px;cursor:pointer;line-height:1.4}
+.fchip small{display:block;font-size:11px;opacity:.75}
+.fchip.on{background:var(--gold);color:#1b2433;font-weight:800;border-color:var(--gold)}
+.fin{width:100%;padding:13px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-size:16px;margin-bottom:10px;font-family:inherit;outline:none}
+.fin::placeholder{color:rgba(255,255,255,.55)}
+.fin:focus{border-color:var(--gold)}
+.fin option{color:#111;background:#fff}
+.wabtn{display:block;width:100%;padding:16px;border:0;border-radius:14px;background:#25d366;color:#fff;font-size:18px;font-weight:800;cursor:pointer;margin-bottom:12px}
+.sent{background:rgba(37,211,102,.15);border:1px solid #25d366;border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.7;margin-bottom:12px;text-align:center}
+.row .sbtn{flex:1}
+.info{font-size:13.5px;line-height:1.9;opacity:.9}
+.info li{margin-right:18px}
+.credit{text-align:center;margin-top:26px;font-size:14px;opacity:.95}
+.credit .links{display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.credit a{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:22px;text-decoration:none;color:#fff;font-size:14px;font-weight:700}
+.wa{background:#25d366}.ig{background:#2f6fd6}
+.disc{font-size:11.5px;opacity:.55;text-align:center;margin-top:14px;line-height:1.7}
+/* ===== TEST ===== */
+#test{direction:ltr;font-family:Arial,Helvetica,sans-serif;min-height:100vh;display:flex;flex-direction:column;background:#fff}
+.tbar{background:#2d3e50;color:#fff;display:flex;align-items:center;gap:8px;padding:8px 12px;position:sticky;top:0;z-index:5;flex-wrap:wrap}
+.tl{font-weight:800;font-size:15px;letter-spacing:1px}
+.tl span{color:var(--gold)}
+.sp{flex:1}
+.tbtn{background:#fff;color:#2d3e50;border:0;border-radius:6px;padding:9px 16px;font-weight:800;cursor:pointer;font-size:14px}
+.tbtn:disabled{opacity:.35;cursor:not-allowed}
+.tbtn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);padding:8px 11px;font-weight:600;font-size:13px}
+.sub2{background:#e7ebf0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:7px 14px;font-size:13px;color:#4a5563}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;color:#2d3e50}
+.timer.warn{color:var(--bad)}
+.stage{flex:1;padding:18px;max-width:1100px;width:100%;margin:auto}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}
+.passage{max-height:calc(100vh - 150px);overflow:auto;line-height:1.8;font-size:16px}
+.passage h4{text-align:center;margin-bottom:12px;font-size:17px}
+.passage p{margin-bottom:12px}
+.passage mark{background:#ffe58a;padding:0 2px}
+.pn{color:#8a94a3;font-size:12px;font-weight:700;margin-right:4px}
+.mail{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.mail .mh{background:#f1f4f8;padding:10px 12px;font-size:13.5px;line-height:1.7;border-bottom:1px solid var(--line)}
+.mail .mb{padding:12px;line-height:1.75}
+.notice{border:3px double #2d3e50;padding:16px;line-height:1.75}
+.notice h5{text-align:center;font-size:16px;margin-bottom:8px;letter-spacing:1px}
+.qtext{font-weight:700;margin-bottom:14px;line-height:1.6;font-size:16px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:8px;margin-bottom:9px;cursor:pointer;line-height:1.5;font-size:15.5px}
+.opt .dot{width:20px;height:20px;border:2px solid #7a8696;border-radius:50%;flex:none;margin-top:1px}
+.opt.sel{border-color:var(--teal);background:#e8f6f8}
+.opt.sel .dot{border-color:var(--teal);background:radial-gradient(var(--teal) 42%,transparent 48%)}
+.center{max-width:720px;margin:auto}
+.dir{max-width:720px;margin:30px auto;text-align:center}
+.dir .ic{font-size:54px}
+.dir h2{margin:12px 0;color:#2d3e50}
+.dir p{line-height:1.8;font-size:16px;color:#3b4654}
+.dir .meta{display:inline-block;margin-top:14px;background:#eef2f6;border-radius:20px;padding:7px 16px;font-size:14px;color:#2d3e50;font-weight:700}
+.tasks{list-style:none;margin-top:16px;text-align:left;display:inline-block}
+.tasks li{padding:6px 0;font-size:15px}
+.tasks li:before{content:"▸ ";color:var(--teal)}
+.cwp{line-height:2.4;font-size:17px}
+.cw input{border:0;border-bottom:2px solid var(--teal);background:#eef8f9;font-size:17px;font-family:inherit;padding:0 2px;outline:none;letter-spacing:1px}
+.cw input:focus{background:#d7f0f3}
+.audio{text-align:center;padding:30px 10px}
+.pic{font-size:72px;line-height:1.2}
+.alabel{font-weight:800;margin:10px 0 4px;color:#2d3e50;font-size:18px}
+.astat{color:#596476;margin:6px 0 16px}
+.bar{height:8px;background:#e3e8ee;border-radius:6px;max-width:420px;margin:auto;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--teal);transition:width .4s}
+.trans{font-size:13px;color:var(--teal);background:none;border:0;text-decoration:underline;cursor:pointer;margin-top:16px}
+.tbox{text-align:left;background:#f6f8fa;border:1px dashed #b9c3cf;border-radius:8px;padding:12px;margin-top:12px;line-height:1.7;font-size:14.5px}
+.ctx{display:flex;gap:10px;align-items:flex-start;margin-bottom:18px}
+.ctx .av{font-size:34px}
+.bubble{background:#eef2f6;border-radius:14px;padding:12px 14px;line-height:1.6;font-size:16px}
+.ansArea{min-height:58px;border:2px dashed #9fb0c2;border-radius:10px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px;background:#fafcfe}
+.tile{padding:9px 13px;border-radius:8px;background:#fff;border:1px solid #9fb0c2;cursor:pointer;font-size:16px;box-shadow:0 2px 0 #c8d2dd}
+.tile.used{visibility:hidden}
+.ansArea .tile{background:#e8f6f8;border-color:var(--teal)}
+.bank{display:flex;flex-wrap:wrap;gap:8px}
+textarea{width:100%;min-height:260px;border:1px solid #9fb0c2;border-radius:8px;padding:12px;font-size:16px;font-family:inherit;line-height:1.6;resize:vertical}
+.wc{display:flex;justify-content:space-between;font-size:13px;color:#596476;margin-top:6px}
+.prof{display:flex;gap:10px;margin-bottom:14px}
+.prof .av{font-size:30px}
+.prof .nm{font-weight:800;font-size:14px;margin-bottom:3px}
+.prof .tx{line-height:1.65;font-size:15px}
+.spk{text-align:center;padding:24px 10px;max-width:640px;margin:auto}
+.avatar{font-size:80px}
+.spkLabel{font-weight:800;color:#2d3e50;margin:6px 0}
+.ivq{background:#eef2f6;border-radius:12px;padding:12px;margin:12px 0;line-height:1.6;font-size:16px}
+.sstat{font-size:17px;margin:14px 0;color:#3b4654;font-weight:700}
+.recdot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--bad);margin-right:6px;animation:bl 1s infinite;vertical-align:middle}
+@keyframes bl{50%{opacity:.25}}
+.live{font-size:14px;color:#7a8696;min-height:22px;font-style:italic}
+.rate{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}
+.rate button{padding:10px 14px;border:1px solid #9fb0c2;border-radius:8px;background:#fff;cursor:pointer;font-size:14px}
+.rate button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.stopb{margin-top:10px;padding:10px 20px;border:0;border-radius:8px;background:var(--bad);color:#fff;font-weight:800;cursor:pointer}
+.tfoot{background:#f1f4f8;border-top:1px solid var(--line);padding:8px 14px;font-size:12px;color:#7a8696;text-align:center}
+@media(max-width:760px){.split{grid-template-columns:1fr}.passage{max-height:42vh}.stage{padding:12px}.tl{font-size:13px}}
+/* ===== RESULTS ===== */
+.ring{width:170px;height:170px;border-radius:50%;margin:10px auto;display:flex;flex-direction:column;align-items:center;justify-content:center;background:conic-gradient(var(--gold) var(--p),rgba(255,255,255,.12) 0);position:relative}
+.ring:before{content:"";position:absolute;inset:12px;border-radius:50%;background:#1a2d4b}
+.ring *{position:relative}
+.ring b{font-size:52px;font-family:Georgia,serif}
+.ring small{opacity:.75}
+.tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 18px}
+.tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:6px 14px;font-size:13.5px}
+.secr{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.secr:last-child{border:0}
+.secr .ic{font-size:26px}
+.secr .nm{flex:1}
+.secr .nm small{display:block;opacity:.7;font-size:12px;margin-top:3px;line-height:1.6}
+.secr .bd{font-size:26px;font-weight:800;color:var(--gold);font-family:Georgia,serif}
+.mbar{height:6px;background:rgba(255,255,255,.12);border-radius:4px;margin-top:6px;overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--gold)}
+.rv{background:#fff;color:var(--txt);border-radius:12px;padding:12px;margin-bottom:10px;font-size:14px;line-height:1.7;direction:ltr;text-align:left}
+.rv .q{font-weight:700}
+.rv .ok{color:var(--ok);font-weight:700}
+.rv .bad{color:var(--bad);font-weight:700}
+.rv .ex{direction:rtl;text-align:right;background:#f4f6f9;border-radius:8px;padding:6px 10px;margin-top:6px;font-family:Tahoma,Arial}
+.hist{font-size:14px;line-height:1.9}
+.hist div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1);padding:6px 0}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px}
+.mbox{background:#fff;border-radius:14px;padding:20px;max-width:360px;width:100%;text-align:center;direction:rtl;font-family:Tahoma,Arial}
+.mbox p{margin-bottom:16px;line-height:1.7}
+.mbox button{padding:10px 20px;border-radius:8px;border:0;margin:0 4px;cursor:pointer;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="page">
+ <div class="wrap">
+  <div class="brand">
+   <div class="logo"><svg viewBox="0 0 64 64"><path d="M10 54V22L32 8l22 14v32" fill="none" stroke="#14233c" stroke-width="5" stroke-linejoin="round"/><path d="M24 54V34h16v20" fill="#14233c"/><path d="M4 56h56" stroke="#14233c" stroke-width="5" stroke-linecap="round"/></svg></div>
+   <h1>على أعتاب التوفل</h1>
+   <div class="en">THRESHOLD</div>
+   <div class="sub">اختبار تجريبي كامل يحاكي اختبار TOEFL iBT بنظامه الجديد<br>أربعة أقسام • درجات من 1 إلى 6 • مستوى CEFR</div>
+  </div>
+
+  <div class="card">
+   <h3>👤 بيانات الطالب</h3>
+   <input class="fin" id="stName" placeholder="اسم الطالب" oninput="saveStudent()">
+   <input class="fin" id="stPhone" type="tel" inputmode="tel" placeholder="رقم واتساب الطالب (مثال: 0791234567)" oninput="saveStudent()" style="direction:ltr;text-align:right">
+   <div style="font-size:12px;opacity:.7;margin-top:2px">تُرسَل النتيجة إلى هذا الرقم عبر واتساب عند انتهاء الاختبار.</div>
+  </div>
+
+  <div class="card">
+   <h3>📑 اختر نموذج الاختبار</h3>
+   <div class="forms" id="forms"></div>
+   <button class="big" onclick="startTest(['reading','listening','writing','speaking'],'full')">🎓 ابدأ الاختبار الكامل<small>Reading • Listening • Writing • Speaking — حوالي 70 دقيقة</small></button>
+  </div>
+
+  <div class="card">
+   <h3>تدريب على قسم واحد</h3>
+   <div class="grid">
+    <button class="sbtn" onclick="startTest(['reading'],'single')"><b>📖</b>القراءة<small>Reading • 18 دقيقة</small></button>
+    <button class="sbtn" onclick="startTest(['listening'],'single')"><b>🎧</b>الاستماع<small>Listening • 15 دقيقة</small></button>
+    <button class="sbtn" onclick="startTest(['writing'],'single')"><b>✍️</b>الكتابة<small>Writing • 23 دقيقة</small></button>
+    <button class="sbtn" onclick="startTest(['speaking'],'single')"><b>🎙️</b>المحادثة<small>Speaking • 8 دقائق</small></button>
+   </div>
+  </div>
+
+  <div class="row" style="margin-bottom:14px">
+   <button class="sbtn" onclick="showHistory()"><b>📊</b>سجل نتائجي</button>
+   <button class="sbtn" onclick="showVoice()"><b>🔊</b>إعدادات الصوت</button>
+   <button class="sbtn" onclick="showAbout()"><b>ℹ️</b>عن الاختبار</button>
+  </div>
+
+  <div class="card info">
+   <h3>قبل أن تبدأ</h3>
+   <ul>
+    <li>استخدم سماعات الأذن، فقسم الاستماع لا يُعاد إلا مرة واحدة كالاختبار الحقيقي.</li>
+    <li>قسم المحادثة يحتاج إذن الميكروفون.</li>
+    <li>الاختبار باللغة الإنجليزية، والنتائج والشروح بالعربية.</li>
+   </ul>
+  </div>
+
+  <div class="card" id="getApp">
+   <h3>📲 حمّل التطبيق</h3>
+   <div class="row">
+    <a class="sbtn" href="Threshold.apk" download style="text-decoration:none"><b>🤖</b>تطبيق أندرويد<small>ملف APK</small></a>
+    <button class="sbtn" onclick="installPWA()"><b>📱</b>تثبيت على الشاشة<small>آيفون / أندرويد / كمبيوتر</small></button>
+   </div>
+  </div>
+
+  <div class="credit">
+   تطوير: <b>Dahshan Soft</b>
+   <div class="links">
+    <a class="wa" href="https://wa.me/962779221235" target="_blank">💬 واتساب</a>
+    <a class="ig" href="https://dahshansoft.com" target="_blank">🌐 dahshansoft.com</a>
+   </div>
+  </div>
+  <div class="disc">تطبيق تدريبي يساعدك على تقييم مستواك في اللغة الإنجليزية والاستعداد لاختبارات اللغة الدولية بثقة.<br>الدرجة الناتجة تقديرية لأغراض التدريب فقط.</div>
+ </div>
+</div>
+
+<!-- ================= TEST ================= -->
+<div id="test" class="hidden">
+ <div class="tbar">
+  <div class="tl">THRESHOLD <span>|</span> <span id="secName">Reading</span></div>
+  <div class="sp"></div>
+  <button class="tbtn ghost" id="btnTime" onclick="toggleTime()">Hide Time</button>
+  <button class="tbtn ghost" onclick="askExit()">Exit</button>
+  <button class="tbtn" id="btnBack" onclick="back()">Back</button>
+  <button class="tbtn" id="btnNext" onclick="next()">Next</button>
+ </div>
+ <div class="sub2"><span id="taskName">—</span><span id="qCount"></span><span class="timer" id="timer">--:--</span></div>
+ <div class="stage" id="stage"></div>
+ <div class="tfoot">Threshold Practice Test • Dahshan Soft</div>
+</div>
+
+<!-- ================= RESULTS / OTHER ================= -->
+<div id="res" class="page hidden"><div class="wrap" id="resBox"></div></div>
+
+<div id="modal" class="modal hidden"><div class="mbox"><p id="mtext"></p><div id="mbtns"></div></div></div>
+
+<script>
+/* =====================================================
+   DATA — original practice content
+===================================================== */
+const META={
+ reading:{name:'Reading',ar:'القراءة',icon:'📖',time:18*60,tasks:['Complete the Words','Read in Daily Life','Read an Academic Passage']},
+ listening:{name:'Listening',ar:'الاستماع',icon:'🎧',time:15*60,tasks:['Listen and Choose a Response','Listen to a Conversation','Listen to an Announcement','Listen to an Academic Talk']},
+ writing:{name:'Writing',ar:'الكتابة',icon:'✍️',time:0,tasks:['Build a Sentence','Write an Email','Write for an Academic Discussion']},
+ speaking:{name:'Speaking',ar:'المحادثة',icon:'🎙️',time:0,tasks:['Listen and Repeat','Take an Interview']}
+};
+
+const CW=[
+ {title:'Coral Reefs',text:"Coral reefs are often called the rainforests of the sea. They cover {le|ss} than one percent of the {oce|an} floor, yet they {sup|port} about a quarter of all {mar|ine} species. Reefs are {bu|ilt} by tiny animals {cal|led} polyps, which {prod|uce} hard skeletons made of {calc|ium} carbonate. Over {thou|sands} of years, these {skel|etons} slowly grow into huge structures."},
+ {title:'Sleep and Learning',text:"Sleep plays a central role in learning. While we rest, the {bra|in} replays the events of the {d|ay} and strengthens important {conne|ctions}. Students who {st|udy} late into the night {of|ten} perform worse than {th|ose} who sleep well. {Resea|rchers} therefore recommend a {reg|ular} sleep schedule, even {dur|ing} exam periods."}
+];
+
+const DAILY=[
+ {title:'Email',html:`<div class="mail"><div class="mh"><b>From:</b> Riverside Library &lt;notices@riversidelib.org&gt;<br><b>To:</b> Maya Collins<br><b>Subject:</b> Your reserved item is ready</div><div class="mb">Dear Maya,<br><br>The book you reserved, <i>Modern Ocean Science</i>, is now available at the front desk of the Main Branch. Please collect it within five days; after that, it will be offered to the next person on the waiting list.<br><br>Remember to bring your student card, as we can no longer accept a printed confirmation. If you cannot come in person, a friend may pick it up for you with a signed note.<br><br>Our opening hours this week are 9:00 a.m. to 6:00 p.m., except Friday, when we close at 2:00 p.m. for staff training.<br><br>Best regards,<br>Riverside Library Team</div></div>`,
+  qs:[
+   {q:'What is the main purpose of the email?',o:['To tell Maya that a book she asked for can be collected','To remind Maya that a book is overdue','To announce the library’s new permanent hours','To invite Maya to a staff training session'],a:0,ex:'الرسالة تخبر مايا أن الكتاب الذي حجزته أصبح جاهزًا للاستلام.'},
+   {q:'What must Maya bring with her?',o:['A printed confirmation','Her student card','A note signed by a librarian','A small payment'],a:1,ex:'ورد: Remember to bring your student card.'},
+   {q:'What will happen if Maya does not collect the book within five days?',o:['She will have to pay a fine','The reservation will be extended','It will be offered to someone else','It will be sent to another branch'],a:2,ex:'سيُعرض الكتاب على الشخص التالي في قائمة الانتظار.'}
+  ]},
+ {title:'Notice',html:`<div class="notice"><h5>CAMPUS FITNESS CENTER<br>TEMPORARY CHANGES</h5>From <b>March 3 to March 17</b>, the swimming pool will be closed for repairs. During this period, members may use the pool at Westfield Community Center free of charge by showing their membership card.<br><br>A shuttle bus will leave the Fitness Center every hour on the hour from 7 a.m. to 7 p.m. All other facilities, including the weight room and the dance studio, will remain open as usual.<br><br>We apologize for any inconvenience.</div>`,
+  qs:[
+   {q:'What is indicated about Westfield Community Center?',o:['It is located on campus','Members can swim there without paying','It will close on March 17','It has a new dance studio'],a:1,ex:'free of charge = مجانًا عند إبراز بطاقة العضوية.'},
+   {q:'Which facility will NOT be available during the period?',o:['The weight room','The dance studio','The swimming pool','The shuttle bus'],a:2,ex:'المسبح مغلق للصيانة، وبقية المرافق تعمل.'}
+  ]}
+];
+
+const ACAD={title:'Urban Heat Islands',html:`<h4>Urban Heat Islands</h4>
+<p><span class="pn">¶1</span>On a summer afternoon, the center of a large city can be several degrees warmer than the surrounding countryside. This phenomenon, known as the urban heat island effect, was first documented in the early nineteenth century by Luke Howard, an amateur scientist who recorded temperatures in and around London. Since then, researchers have confirmed that nearly every major city produces its own pocket of warmth.</p>
+<p><span class="pn">¶2</span>Several factors combine to create this effect. Dark surfaces such as asphalt roads and tar roofs absorb a large proportion of incoming sunlight and release it slowly as heat, often long after sunset. In addition, cities contain relatively little vegetation. Trees and plants cool their surroundings through a process called evapotranspiration, in which water evaporates from leaves and carries heat away. When green spaces are replaced by buildings, this natural cooling system is lost. Finally, human activity itself generates heat: vehicles, factories, and air conditioners all release warm air into the streets.</p>
+<p><span class="pn">¶3</span>The consequences are significant. Higher temperatures increase the demand for electricity, particularly for cooling, which in turn raises emissions from power plants. Heat islands can also worsen air quality, since many pollutants form more rapidly in warm conditions. Most seriously, extreme urban heat poses a danger to human health, especially for elderly people and those without access to air conditioning.</p>
+<p><span class="pn">¶4</span>Fortunately, cities are not powerless. Some have begun painting roofs white or light gray so that they reflect rather than absorb sunlight. Others are planting trees along streets and creating "green roofs" covered with grasses and shrubs. Although no single measure can eliminate the problem, studies suggest that a combination of strategies can lower peak temperatures by as much as two or three degrees—a modest change that may nonetheless save lives during heat waves.</p>`,
+ qs:[
+  {q:'The word "documented" in paragraph 1 is closest in meaning to',o:['questioned','recorded','caused','predicted'],a:1,hl:'documented',ex:'documented = سُجِّل ووُثِّق (recorded).'},
+  {q:'According to paragraph 2, why do dark surfaces contribute to urban heat islands?',o:['They reflect sunlight onto nearby buildings','They prevent rainwater from evaporating','They absorb sunlight and release it slowly as heat','They are found mainly near factories'],a:2,ex:'Dark surfaces absorb ... and release it slowly as heat.'},
+  {q:'According to paragraph 2, all of the following contribute to the heat island effect EXCEPT',o:['heat released by vehicles','a lack of trees and plants','dark roofs and roads','high levels of rainfall'],a:3,ex:'لم يُذكر المطر سببًا، أما البقية فمذكورة في الفقرة.'},
+  {q:'What can be inferred from paragraph 3 about elderly people?',o:['They are more vulnerable to extreme heat','They use more electricity than others','They are a major source of pollution','They prefer to live in large cities'],a:0,ex:'especially for elderly people → فهم أكثر عرضة لخطر الحرارة.'},
+  {q:'Why does the author mention "green roofs" in paragraph 4?',o:['To explain how buildings absorb heat','To give an example of a strategy for reducing urban heat','To argue that vegetation is too expensive','To show that white roofs are ineffective'],a:1,hl:'"green roofs"',ex:'ذُكرت مثالًا على حلول تخفيف الحرارة.'},
+  {q:'Which of the following best expresses the main idea of the passage?',o:['Luke Howard was the most important scientist of his time.','Cities are warmer than surrounding areas for several reasons, which causes problems that can be partly reduced.','Air conditioners are the main cause of high city temperatures.','Painting roofs white can completely solve the problem of urban heat.'],a:1,ex:'النص يعرّف الظاهرة وأسبابها ونتائجها وحلولها الجزئية.'}
+ ]};
+
+const LCR=[
+ {v:'f',t:'Do you know if the library is open on Sunday?',o:['I think it opens at noon.','I finished the book on Sunday.','The library has many books.'],a:0,ex:'السؤال عن وقت الدوام، والرد المناسب يذكر الوقت.'},
+ {v:'m',t:'Would you mind if I borrowed your notes from yesterday’s lecture?',o:['Yes, the lecture was very long.','Not at all. Here you go.','I don’t mind the professor.'],a:1,ex:'Would you mind? → Not at all = لا مانع.'},
+ {v:'f',t:'I’m thinking of dropping my chemistry class.',o:['The chemistry lab is next door.','I dropped my phone yesterday.','Really? I thought you enjoyed it.'],a:2,ex:'رد طبيعي يُظهر الاستغراب.'},
+ {v:'m',t:'Why don’t we meet at the café after class?',o:['Sounds good. Around four?','Because the café is closed.','I met him after class.'],a:0,ex:'Why don’t we = اقتراح، وليس سؤالًا عن السبب.'},
+ {v:'f',t:'Has the professor posted the grades yet?',o:['She posted a letter.','Not yet. Maybe tomorrow.','Yes, I am a professor.'],a:1,ex:'yet → Not yet.'}
+];
+
+const LISTEN=[
+ {task:'Listen to a Conversation',pic:'👩‍🎓 👨‍🏫',label:'A student talks with her professor',lines:[
+  {v:'f',t:'Hi, Professor Lee. Do you have a minute?'},
+  {v:'m',t:'Of course, Sarah. What can I do for you?'},
+  {v:'f',t:'I’m trying to choose a topic for my research paper, and I’m stuck between two ideas. One is about how social media affects sleep, and the other is about the history of public libraries.'},
+  {v:'m',t:'Both sound interesting. Which one do you care about more?'},
+  {v:'f',t:'Honestly, the social media topic. But I’m worried there’s too much information. I don’t know where to start.'},
+  {v:'m',t:'That’s actually a common problem. My advice is to narrow it down. Instead of social media in general, you could focus on one group, say, first-year university students, and one platform.'},
+  {v:'f',t:'Oh, that makes sense. It would be much more manageable.'},
+  {v:'m',t:'Exactly. And the library has a research workshop this Thursday. They’ll show you how to search academic databases efficiently. I think it would really help.'},
+  {v:'f',t:'Great, I’ll sign up today. Thank you so much!'}],
+  qs:[
+   {q:'Why does the woman go to see the professor?',o:['To ask about her grade','To get help with her research paper topic','To borrow a book about libraries','To complain about a workshop'],a:1,ex:'جاءت لأنها محتارة في اختيار موضوع البحث.'},
+   {q:'What does the professor suggest?',o:['Choosing the library topic instead','Working with a partner','Focusing on a specific group and platform','Delaying the paper until next term'],a:2,ex:'narrow it down = تضييق الموضوع.'},
+   {q:'What will the woman probably do next?',o:['Register for the research workshop','Change her major','Write about public libraries','Visit the professor again on Thursday'],a:0,ex:'I’ll sign up today.'}
+  ]},
+ {task:'Listen to an Announcement',pic:'📢',label:'A campus announcement',lines:[
+  {v:'m',t:'Good morning, everyone. This is a reminder that the university’s annual career fair will take place next Wednesday in the Student Union building, from ten a.m. to three p.m. More than sixty companies will be attending, including several in engineering, healthcare, and education. Please note that this year, students must register online before Monday in order to attend. Also, don’t forget to bring several printed copies of your résumé. If you’d like someone to review your résumé beforehand, the Career Center is offering free fifteen-minute appointments all week.'}],
+  qs:[
+   {q:'What is the announcement mainly about?',o:['A new engineering program','An upcoming career fair','Changes to the Student Union building','A healthcare workshop'],a:1,ex:'career fair = معرض التوظيف.'},
+   {q:'What must students do before Monday?',o:['Register online','Pay an entrance fee','Send their résumé to companies','Meet with a Career Center advisor'],a:0,ex:'students must register online before Monday.'}
+  ]},
+ {task:'Listen to an Academic Talk',pic:'👩‍🏫 🐦',label:'A professor talks about biology',lines:[
+  {v:'f',t:'Today let’s talk about how migrating birds find their way. Every year, millions of birds travel thousands of kilometers between their summer and winter homes, and many of them return to exactly the same place. So how do they do it? Well, scientists believe birds use several tools at once. First, many species use the sun during the day and the stars at night as a kind of compass. In fact, in one famous experiment, researchers placed young birds in a planetarium and changed the position of the artificial stars. The birds changed direction to match. Second, birds appear to sense the Earth’s magnetic field, which gives them information about direction even when the sky is cloudy. And finally, as birds get closer to their destination, they rely on landmarks, things like rivers, coastlines, and mountain ranges. So, rather than depending on a single method, birds combine several systems, which makes their navigation remarkably reliable.'}],
+  qs:[
+   {q:'What is the talk mainly about?',o:['Why birds migrate in winter','How migrating birds navigate','How planetariums are built','The effects of weather on birds'],a:1,ex:'how migrating birds find their way.'},
+   {q:'Why does the professor mention the planetarium experiment?',o:['To show that birds use stars for direction','To explain why young birds get lost','To describe a new type of telescope','To prove birds cannot fly at night'],a:0,ex:'غيّرت الطيور اتجاهها حين تغيّرت النجوم.'},
+   {q:'According to the professor, when do birds rely on landmarks?',o:['When the sky is cloudy','At the start of the journey','When they are close to their destination','Only during the day'],a:2,ex:'as birds get closer to their destination.'},
+   {q:'What is the professor’s main point about bird navigation?',o:['It depends mainly on the magnetic field','It is often unreliable','It combines several different methods','It is learned from older birds'],a:2,ex:'birds combine several systems.'}
+  ]}
+];
+
+const BS=[
+ {v:'f',ctx:'Did you finish the reading for today’s class?',ans:['I','only had','time to read','the first','chapter']},
+ {v:'m',ctx:'Where are you going after the lecture?',ans:['I am','heading to','the library','to return','a book']},
+ {v:'f',ctx:'What did the professor say about the exam?',ans:['She said','that it','will cover','the last','three units']},
+ {v:'m',ctx:'Can you tell me where the science building is?',ans:['It is','right next','to the','main','cafeteria']},
+ {v:'f',ctx:'Why were you late this morning?',ans:['My bus','did not','arrive','on time','today']}
+];
+
+const EMAIL={time:7*60,to:'Daniel',subj:'Club meeting time',prompt:`<b>You recently joined a student photography club. However, the club has changed its weekly meeting time to Tuesday evenings, when you work at a part-time job.</b><br><br>Write an email to the club president, <b>Daniel</b>. In your email, do the following:<ul style="margin:10px 22px;line-height:1.9"><li>Explain your situation.</li><li>Ask about possible solutions.</li><li>Suggest an idea that could help other members in a similar situation.</li></ul>Write as much as you can and in complete sentences.`};
+
+const DISC={time:10*60,prof:'Professor Ahmed',q:'This week we have been discussing education and technology. Some people believe that universities should replace most traditional lectures with online video lessons that students can watch at any time. Others argue that in-person lectures are still essential. What is your opinion, and why?',
+ posts:[{n:'Lina',av:'👩',t:'I support online lessons. Students can pause and rewatch difficult parts, and they can study at their own pace. This is especially useful for students who work part-time.'},
+        {n:'Omar',av:'👨',t:'I disagree. In a real classroom, students can ask questions immediately and discuss ideas with classmates. Watching videos alone can make it hard to stay motivated.'}]};
+
+const LR=['Welcome to the campus tour.','The library is located across from the main gate.','Students can borrow up to ten books at a time.','The cafeteria serves breakfast from seven until ten.','Please remember to keep your student card with you at all times.'];
+
+const IV=['Can you tell me about where you usually study, and why you prefer that place?','Some students like to study in groups, while others prefer to study alone. Which do you prefer, and why?','How do you think technology has changed the way students learn?','If your university could improve one thing for students, what should it be, and why?'];
+
+
+/* ===================== FORM 2 ===================== */
+const F2={
+CW:[
+ {title:'Honeybee Communication',text:"Honeybees have a remarkable way of sharing information. When a worker finds a good {sou|rce} of food, she returns to the {hi|ve} and performs a special {da|nce}. The {ang|le} of her movement shows where the food is, {wh|ile} its length tells other {be|es} how far away it is. {Scien|tists} have studied this behavior {f|or} decades, and it {rem|ains} one of the most famous {exam|ples} of animal communication."},
+ {title:'Public Transportation',text:"Many cities are investing in public transportation. Buses and trains can {mo|ve} large numbers of people {wh|ile} using less fuel per {pass|enger} than private cars. They {al|so} reduce traffic in crowded {stre|ets}. However, a system {wo|rks} well only if it is {rel|iable} and affordable. If {serv|ices} are slow or expensive, {pe|ople} will simply continue to {dri|ve}."}
+],
+DAILY:[
+ {title:'Email',html:`<div class="mail"><div class="mh"><b>From:</b> Dr. Anita Patel<br><b>To:</b> Biology 101 Students<br><b>Subject:</b> Class moved – Thursday</div><div class="mb">Dear students,<br><br>Because of a scheduled power outage in Hamilton Hall, this Thursday’s class will meet in Room 204 of the Science Library instead of our usual classroom.<br><br>The lab session that normally follows has been canceled; we will make it up next Tuesday at the same time.<br><br>Please complete Chapter 6 before class, as we will begin with a short quiz.<br><br>See you Thursday,<br>Dr. Patel</div></div>`,
+  qs:[
+   {q:'Why will the class meet in a different room?',o:['The usual classroom is being painted','There will be no electricity in Hamilton Hall','The professor wants to visit the library','More students have joined the class'],a:1,ex:'power outage = انقطاع الكهرباء.'},
+   {q:'What will happen to the lab session?',o:['It will take place next Tuesday instead','It will be held in the library','It will be replaced by a quiz','It has been canceled for the rest of the term'],a:0,ex:'we will make it up next Tuesday.'},
+   {q:'What should students do before Thursday?',o:['Email the professor','Bring their lab equipment','Read Chapter 6','Visit Room 204'],a:2,ex:'Please complete Chapter 6 before class.'}
+  ]},
+ {title:'Advertisement',html:`<div class="notice"><h5>FOR SALE — USED TEXTBOOKS</h5>Graduating senior selling textbooks for <b>Economics 201</b>, <b>Statistics 110</b>, and <b>Introduction to Psychology</b>.<br><br>All in good condition, some with notes in the margins. <b>$15 each or $40 for all three.</b><br><br>Available for pickup at North Dorm until May 20.<br>Text Jordan at 555-0147. Cash only, please.</div>`,
+  qs:[
+   {q:'What is indicated about the seller?',o:['He is a professor of economics','He is about to finish his studies','He works at a bookstore','He has never used the books'],a:1,ex:'Graduating senior = طالب في سنة التخرج.'},
+   {q:'How much would a buyer pay for all three books?',o:['$15','$30','$40','$45'],a:2,ex:'$40 for all three.'}
+  ]}
+],
+ACAD:{title:'How Deserts Form',html:`<h4>How Deserts Form</h4>
+<p><span class="pn">¶1</span>Deserts cover about one-third of Earth’s land surface, yet they are often misunderstood. Although many people picture endless sand dunes under a burning sun, a desert is defined not by temperature or sand but by a lack of precipitation. Generally, any region that receives less than 250 millimeters of rain per year is considered a desert. By this definition, even the frozen interior of Antarctica qualifies.</p>
+<p><span class="pn">¶2</span>Deserts form for several different reasons. Many of the world’s largest deserts, including the Sahara, lie near 30 degrees north or south of the equator. At these latitudes, air that has risen near the equator and lost its moisture descends again. As it sinks, the air warms and becomes even drier, discouraging cloud formation. Other deserts are created by mountains. When moist air from the ocean meets a mountain range, it is forced upward, cools, and releases its water as rain on the near side. By the time the air crosses to the far side, it holds little moisture, creating what geographers call a "rain shadow."</p>
+<p><span class="pn">¶3</span>Distance from the ocean also matters. In the center of large continents, such as parts of central Asia, air masses have traveled so far over land that most of their moisture has already fallen. Finally, cold ocean currents can produce coastal deserts. The Atacama Desert in Chile, one of the driest places on Earth, is located beside a cold current that cools the air above it and prevents rain clouds from forming.</p>
+<p><span class="pn">¶4</span>Although deserts appear lifeless, they support a surprising variety of plants and animals. Many species have adapted by storing water, remaining underground during the hottest hours, or becoming active only after rare rainfalls. Understanding how deserts form helps scientists predict how they may expand or shrink as global climate patterns change.</p>`,
+ qs:[
+  {q:'The word "qualifies" in paragraph 1 is closest in meaning to',o:['changes quickly','meets the requirements','slowly disappears','becomes larger'],a:1,hl:'qualifies',ex:'qualifies هنا = تنطبق عليه الشروط (يُعدّ صحراء).'},
+  {q:'According to paragraph 1, what defines a desert?',o:['Very high temperatures','Large areas of sand','A low amount of precipitation','A lack of plants and animals'],a:2,ex:'defined ... by a lack of precipitation.'},
+  {q:'According to paragraph 2, why is the air near 30 degrees latitude dry?',o:['It has already lost its moisture and warms as it sinks','It comes directly from the ocean','It is cooled by nearby mountains','It contains large amounts of sand'],a:0,ex:'الهواء فقد رطوبته ثم يسخن أثناء هبوطه فيزداد جفافًا.'},
+  {q:'In paragraph 2, the term "rain shadow" refers to',o:['clouds that block sunlight','the side of a mountain that receives heavy rain','a dry area on the far side of a mountain','a season with no rain'],a:2,hl:'"rain shadow."',ex:'الجهة الجافة خلف الجبل.'},
+  {q:'Why does the author mention the Atacama Desert in paragraph 3?',o:['To show that deserts can be cold','To give an example of a desert caused by a cold ocean current','To compare it with the Sahara','To explain why central Asia is dry'],a:1,ex:'مثال على صحراء ساحلية سببها تيار بحري بارد.'},
+  {q:'All of the following are mentioned as causes of deserts EXCEPT',o:['mountain ranges','distance from the ocean','cold ocean currents','heavy vegetation'],a:3,ex:'الغطاء النباتي الكثيف لم يُذكر سببًا.'}
+ ]},
+LCR:[
+ {v:'m',t:'Could you tell me how to get to the registration office?',o:['I registered last week.','Sure, it’s on the first floor of the main building.','I’d like to register too.'],a:1,ex:'سؤال عن المكان → جواب يذكر المكان.'},
+ {v:'f',t:'I can’t believe how hard that exam was.',o:['The exam is on Monday.','I can believe you.','I know. I didn’t finish the last section either.'],a:2,ex:'رد يُظهر الموافقة والتعاطف.'},
+ {v:'m',t:'Are you going to the study group tonight?',o:['I’d like to, but I have to work.','The group studied biology.','Yes, I went last night.'],a:0,ex:'tonight → جواب عن الليلة لا عن الماضي.'},
+ {v:'f',t:'This printer isn’t working again.',o:['I printed it yesterday.','Let’s try the one in the library.','It works at the bank.'],a:1,ex:'اقتراح حل للمشكلة.'},
+ {v:'m',t:'Do you want to split a taxi to the airport?',o:['The airport is very big.','I split the cake in half.','Sure, that would save us both money.'],a:2,ex:'split a taxi = نتقاسم أجرة التاكسي.'}
+],
+LISTEN:[
+ {task:'Listen to a Conversation',pic:'👨‍🎓 👩‍💼',label:'A student talks with a housing office employee',lines:[
+  {v:'m',t:'Hi, I’d like to ask about changing my dorm room.'},
+  {v:'f',t:'Sure. Can I ask what the problem is?'},
+  {v:'m',t:'Well, my room is right above the dining hall, and it’s really noisy early in the morning. The delivery trucks arrive around five a.m. I’ve hardly been sleeping.'},
+  {v:'f',t:'I’m sorry to hear that. Unfortunately, we don’t have any empty rooms in that building right now. But there is one available in Oak Hall.'},
+  {v:'m',t:'Oak Hall? Isn’t that far from the main campus?'},
+  {v:'f',t:'It’s about a fifteen-minute walk, but there’s a free shuttle every twenty minutes. And it’s a much quieter area.'},
+  {v:'m',t:'Hmm, I guess that could work. Would I have to pay anything extra?'},
+  {v:'f',t:'No, the price is the same. You’d just need to fill out a transfer form and move by the end of next week.'},
+  {v:'m',t:'Okay. Can I take the form now?'},
+  {v:'f',t:'Of course. Here you go.'}],
+  qs:[
+   {q:'Why does the man go to the housing office?',o:['To pay his housing fees','To move to a different room','To complain about the food','To ask for a job in the dining hall'],a:1,ex:'changing my dorm room.'},
+   {q:'What is the problem with the man’s current room?',o:['It is too expensive','It is too far from campus','It is noisy early in the morning','It is too small'],a:2,ex:'delivery trucks ... five a.m.'},
+   {q:'What is true about Oak Hall?',o:['It is in a quieter area','It costs more than his current room','It is next to the dining hall','It has no free rooms'],a:0,ex:'a much quieter area + free shuttle.'}
+  ]},
+ {task:'Listen to an Announcement',pic:'🚆',label:'An announcement at a train station',lines:[
+  {v:'f',t:'Attention, passengers. The four fifteen train to Riverside has been delayed by approximately thirty minutes due to a signal problem near Central Station. We now expect it to depart from platform six instead of platform three. Passengers traveling to Lakewood may take the four thirty express train, which will make an additional stop at Lakewood today only. We apologize for the delay and thank you for your patience.'}],
+  qs:[
+   {q:'Why is the train delayed?',o:['Bad weather','A signal problem','Too many passengers','A change in the schedule'],a:1,ex:'due to a signal problem.'},
+   {q:'What can passengers going to Lakewood do?',o:['Take a bus instead','Wait at platform three','Take the 4:30 express train','Get a full refund'],a:2,ex:'the 4:30 express ... additional stop at Lakewood.'}
+  ]},
+ {task:'Listen to an Academic Talk',pic:'👨‍🏫 🐬',label:'A professor talks about animal behavior',lines:[
+  {v:'m',t:'Okay, so last time we talked about why humans need sleep. Today I want to look at some unusual sleep patterns in animals. Take dolphins, for example. Dolphins are mammals, so they need to come to the surface to breathe. If they fell into a deep sleep the way we do, they could drown. So what they do is called unihemispheric sleep. That means only one half of the brain sleeps at a time, while the other half stays awake. The eye connected to the awake half stays open, watching for danger. After a while, the two halves switch. Interestingly, some birds do the same thing. Ducks sleeping at the edge of a group often keep one eye open, facing away from the others, so they can spot predators. Ducks in the middle of the group, which are safer, tend to sleep with both halves of the brain. So this tells us that sleep isn’t just a fixed biological process. Animals can adjust how they sleep depending on the risks in their environment.'}],
+  qs:[
+   {q:'What is the talk mainly about?',o:['Why humans need sleep','Unusual ways some animals sleep','How dolphins communicate','The diet of ducks'],a:1,ex:'unusual sleep patterns in animals.'},
+   {q:'Why do dolphins sleep with only half of the brain?',o:['So they can keep breathing and avoid drowning','So they can hunt at night','Because they sleep for very short periods','Because the water is too cold'],a:0,ex:'they need to come to the surface to breathe.'},
+   {q:'Why does the professor mention ducks at the edge of a group?',o:['To show that ducks sleep more than dolphins','To show that animals adjust their sleep according to danger','To explain how ducks find food','To describe how ducks build nests'],a:1,ex:'البطّ في الطرف معرّض للخطر فيبقي عينًا مفتوحة.'},
+   {q:'What can be inferred about ducks in the middle of the group?',o:['They face less danger from predators','They never sleep','They watch for predators all night','They are older than the other ducks'],a:0,ex:'which are safer.'}
+  ]}
+],
+BS:[
+ {v:'m',ctx:'How was your weekend?',ans:['It was','really relaxing','because I','stayed','at home']},
+ {v:'f',ctx:'Have you decided on your major yet?',ans:['I am','thinking about','studying','computer','science']},
+ {v:'m',ctx:'What time does the museum close?',ans:['It closes','at six','on weekdays','and at five','on weekends']},
+ {v:'f',ctx:'Why did you change your schedule?',ans:['I wanted','to have','more time','for my','part-time job']},
+ {v:'m',ctx:'Did you enjoy the guest lecture?',ans:['Yes, it','was more','interesting','than I','expected']}
+],
+EMAIL:{time:7*60,to:'Customer Service',subj:'Problem with my laptop',prompt:`<b>You bought a laptop from an online store two weeks ago. It arrived on time, but the battery stops working after only one hour of use.</b><br><br>Write an email to the store’s <b>customer service team</b>. In your email, do the following:<ul style="margin:10px 22px;line-height:1.9"><li>Describe the problem.</li><li>Explain what you have already tried.</li><li>Say what you would like the store to do.</li></ul>Write as much as you can and in complete sentences.`},
+DISC:{time:10*60,prof:'Dr. Rivera',q:'In our unit on cities, we have discussed how local governments spend their money. Imagine that your city has extra funds this year. Should the money be used to build more parks and green spaces, or to improve public transportation? Explain your choice.',
+ posts:[{n:'Sara',av:'👩',t:'I would choose public transportation. Better buses and trains would reduce traffic and pollution, and they would help people who cannot afford cars get to work.'},
+        {n:'Kevin',av:'👨',t:'I think parks are more important. People need places to exercise, relax, and meet their neighbors. Green spaces also make a city cooler in summer.'}]},
+LR:['Welcome to the city science museum.','Please leave your bags at the front desk.','The dinosaur exhibit is on the second floor.','Photography is allowed, but please do not use a flash.','Guided tours begin every hour in the main hall.'],
+IV:['What do you usually do in your free time, and why do you enjoy it?','Do you prefer to travel alone or with other people? Why?','Some people say young people spend too much time on their phones. Do you agree or disagree, and why?','Describe a skill you would like to learn in the future, and explain why.']
+};
+
+/* ===================== FORM 3 ===================== */
+const F3={
+CW:[
+ {title:'The Story of Chocolate',text:"Chocolate comes from the seeds of the cacao tree, which grows in {tro|pical} regions near the equator. The {see|ds} are first fermented and then {dri|ed} in the sun. After that, {th|ey} are roasted to develop their {fla|vor}. For most of its {hist|ory}, chocolate was consumed as a {bit|ter} drink. Solid chocolate bars {beca|me} popular only in the {nine|teenth} century, when new {mach|ines} made production easier."},
+ {title:'Learning a Language',text:"Learning a new language takes time and patience. Experts {sug|gest} practicing a little every day {ra|ther} than studying for many hours {o|nce} a week. Reading simple books, {watc|hing} films, and talking with {nat|ive} speakers can all help. Mistakes are a {nor|mal} part of the process, so {lear|ners} should not be afraid to {sp|eak}. Over time, small daily {eff|orts} lead to real {prog|ress}."}
+],
+DAILY:[
+ {title:'Email',html:`<div class="mail"><div class="mh"><b>From:</b> Greenview Apartments Management<br><b>To:</b> Building C Residents<br><b>Subject:</b> Water shut-off on Saturday</div><div class="mb">Dear residents,<br><br>Please be advised that the water supply to Building C will be turned off this Saturday from 8:00 a.m. until approximately 1:00 p.m. so that workers can replace an old pipe in the basement.<br><br>We recommend storing some water in advance for drinking and cooking. The laundry room will also be closed during this time.<br><br>If the work finishes early, we will notify you by text message.<br><br>Thank you for your understanding,<br>Greenview Management</div></div>`,
+  qs:[
+   {q:'Why will the water be turned off?',o:['To clean the water tanks','To replace an old pipe','To repair the laundry machines','To install a new heater'],a:1,ex:'replace an old pipe in the basement.'},
+   {q:'What are residents advised to do?',o:['Leave the building on Saturday','Store some water before Saturday','Call the management office','Do their laundry on Saturday'],a:1,ex:'storing some water in advance.'},
+   {q:'How will residents find out if the work finishes early?',o:['By email','By a notice on the door','By text message','By phone call'],a:2,ex:'we will notify you by text message.'}
+  ]},
+ {title:'Poster',html:`<div class="notice"><h5>SPRING BOOK SWAP<br>Bring a book, take a book!</h5><b>Saturday, April 12 • 10 a.m. – 2 p.m.</b><br>Student Center Lobby<br><br>Bring up to five gently used books and exchange them for others. Textbooks and magazines will not be accepted.<br><br>Any books left at the end of the day will be donated to the city library.<br><br>☕ Free coffee for the first 50 visitors!</div>`,
+  qs:[
+   {q:'What will happen to the books that are left at the end of the event?',o:['They will be sold','They will be given to the city library','They will be returned to their owners','They will be kept for next year'],a:1,ex:'donated to the city library.'},
+   {q:'Which item can NOT be exchanged at the event?',o:['A novel','A history book','A textbook','A children’s book'],a:2,ex:'Textbooks and magazines will not be accepted.'}
+  ]}
+],
+ACAD:{title:'Ice Cores: A Frozen Record',html:`<h4>Ice Cores: A Frozen Record</h4>
+<p><span class="pn">¶1</span>Deep within the ice sheets of Greenland and Antarctica lies one of the most valuable records of Earth’s past climate. Each year, snow falls on these ice sheets and is gradually compressed into ice by the weight of the snow above it. Because the ice rarely melts, these layers accumulate over hundreds of thousands of years, much like the pages of a history book.</p>
+<p><span class="pn">¶2</span>To read this record, scientists drill long cylinders of ice, known as ice cores, sometimes more than three kilometers deep. The layers can be counted much as one counts the rings of a tree, allowing researchers to date each section. More importantly, the ice contains tiny bubbles of air that were trapped when the snow was compressed. These bubbles are, in effect, samples of the ancient atmosphere.</p>
+<p><span class="pn">¶3</span>By analyzing the air in these bubbles, scientists can measure the levels of gases such as carbon dioxide at different points in history. They can also estimate past temperatures by examining the chemical composition of the ice itself. The results have revealed a clear pattern: over the past 800,000 years, periods of higher carbon dioxide have generally coincided with warmer temperatures.</p>
+<p><span class="pn">¶4</span>Ice cores also preserve evidence of specific events. Layers of volcanic ash, for instance, mark major eruptions, while dust levels indicate how dry and windy the planet was at various times. However, as global temperatures rise, some glaciers are melting faster than ever, and with them, parts of this irreplaceable record may be lost forever.</p>`,
+ qs:[
+  {q:'The word "accumulate" in paragraph 1 is closest in meaning to',o:['build up','break apart','move away','change color'],a:0,hl:'accumulate',ex:'accumulate = تتراكم.'},
+  {q:'According to paragraph 2, how can scientists determine the age of a section of ice?',o:['By measuring its temperature','By counting its layers','By weighing it','By melting it'],a:1,ex:'The layers can be counted ... to date each section.'},
+  {q:'Why does the author describe the air bubbles as "samples of the ancient atmosphere"?',o:['They contain air that was trapped long ago','They were created by scientists','They are found only in Antarctica','They show where volcanoes are located'],a:0,hl:'samples of the ancient atmosphere',ex:'الفقاعات هواء محبوس منذ زمن بعيد.'},
+  {q:'According to paragraph 3, what have ice cores revealed?',o:['Temperatures have never changed','Higher carbon dioxide has usually matched warmer periods','Carbon dioxide levels were higher in the past than today','Ice cores cannot measure temperature'],a:1,ex:'higher carbon dioxide ... coincided with warmer temperatures.'},
+  {q:'According to paragraph 4, all of the following can be found in ice cores EXCEPT',o:['volcanic ash','dust','fossils of ancient animals','evidence of dry periods'],a:2,ex:'لم تُذكر الأحافير.'},
+  {q:'What does the author imply in paragraph 4?',o:['Scientists no longer need ice cores','Melting glaciers may destroy valuable scientific information','Volcanic eruptions are becoming more common','Dust levels are rising quickly'],a:1,ex:'parts of this irreplaceable record may be lost forever.'}
+ ]},
+LCR:[
+ {v:'f',t:'Excuse me, is this seat taken?',o:['No, go ahead.','I took it yesterday.','Yes, I’m sitting.'],a:0,ex:'No, go ahead = لا، تفضّل.'},
+ {v:'m',t:'I didn’t see you in class this morning.',o:['The class was in the morning.','I had a doctor’s appointment.','I see you every day.'],a:1,ex:'رد يوضح سبب الغياب.'},
+ {v:'f',t:'Should I bring anything to the party?',o:['The party was great.','I brought my brother.','Maybe some drinks, if you don’t mind.'],a:2,ex:'سؤال عن المستقبل → اقتراح.'},
+ {v:'m',t:'When is the deadline for the scholarship application?',o:['I think it’s the end of this month.','I applied for a job.','The scholarship is very generous.'],a:0,ex:'When → جواب زمني.'},
+ {v:'f',t:'Would you rather meet in person or online?',o:['I met him online.','In person works better for me.','Yes, I would.'],a:1,ex:'سؤال اختيار → اختر أحد الأمرين.'}
+],
+LISTEN:[
+ {task:'Listen to a Conversation',pic:'👩‍🎓 👨‍🏫',label:'A student talks with her professor',lines:[
+  {v:'f',t:'Professor Grant, I wanted to talk to you about the lab report that’s due Friday.'},
+  {v:'m',t:'Sure, Emily. Is everything all right?'},
+  {v:'f',t:'Not really. I’ve had the flu all week, and I couldn’t go to the lab session on Tuesday, so I don’t have the data I need.'},
+  {v:'m',t:'I see. Well, your health comes first. Do you have a note from the health center?'},
+  {v:'f',t:'Yes, I can bring it tomorrow.'},
+  {v:'m',t:'Good. Here’s what we can do. There’s another lab section on Monday morning. You can join that group and collect your data then. Then you can submit your report by next Wednesday instead of this Friday.'},
+  {v:'f',t:'That would be perfect. Thank you so much.'},
+  {v:'m',t:'No problem. Just send me an email so I remember, and I’ll let the lab assistant know you’re coming.'}],
+  qs:[
+   {q:'Why does the student go to see the professor?',o:['She missed a lab session and needs more time','She wants to change her lab partner','She disagrees with her grade','She wants to become a lab assistant'],a:0,ex:'كانت مريضة وفاتتها جلسة المختبر.'},
+   {q:'What does the professor ask the student to bring?',o:['Her lab data','A note from the health center','Her textbook','A new report'],a:1,ex:'a note from the health center.'},
+   {q:'What will the student do on Monday?',o:['Submit her report','Visit the health center','Attend another lab section','Meet the lab assistant at his office'],a:2,ex:'another lab section on Monday morning.'}
+  ]},
+ {task:'Listen to an Announcement',pic:'♻️',label:'An announcement on campus',lines:[
+  {v:'m',t:'Hello, students. This is a message from the campus sustainability office. Starting next month, the university will no longer sell plastic water bottles in campus stores and vending machines. Instead, we have installed twenty new water refill stations across campus, including in every dormitory and in the main library. To help with this change, every student can pick up a free reusable bottle at the Student Center during the first week of the month. Just bring your student ID. Thank you for helping us make our campus greener.'}],
+  qs:[
+   {q:'What is the main purpose of the announcement?',o:['To advertise a new vending machine','To inform students that plastic bottles will no longer be sold','To ask students to clean the campus','To announce the opening of a new library'],a:1,ex:'no longer sell plastic water bottles.'},
+   {q:'How can students get a free reusable bottle?',o:['By buying one at the library','By bringing their student ID to the Student Center','By filling out an online form','By visiting a dormitory'],a:1,ex:'Student Center ... bring your student ID.'}
+  ]},
+ {task:'Listen to an Academic Talk',pic:'👩‍🏫 🧠',label:'A professor talks about psychology',lines:[
+  {v:'f',t:'Today we’re going to talk about a concept in psychology called the spacing effect. Many students study by cramming, that is, they review everything in one long session the night before an exam. It feels effective, because the information seems fresh. But research shows it’s actually one of the least efficient ways to learn. Back in the eighteen eighties, a German psychologist named Hermann Ebbinghaus tested his own memory by learning lists of nonsense syllables. He found that he forgot much of the information within a day. But when he reviewed the material several times, with gaps between the sessions, he remembered it far longer. This is the spacing effect. Modern studies have confirmed it again and again, with everything from vocabulary to medical training. So, the practical lesson is simple. Instead of studying for five hours on one night, you’ll remember much more if you study for one hour on five different days.'}],
+  qs:[
+   {q:'What is the talk mainly about?',o:['The history of German psychology','The spacing effect in learning','How to prepare for medical school','Why students feel stressed before exams'],a:1,ex:'the spacing effect.'},
+   {q:'Why does the professor mention Hermann Ebbinghaus?',o:['To describe early research showing that spaced review improves memory','To explain how to learn nonsense words','To criticize old research methods','To compare German and American students'],a:0,ex:'تجربته أثبتت أن المراجعة المتباعدة تقوّي الذاكرة.'},
+   {q:'What does the professor say about cramming?',o:['It is the best method for vocabulary','It feels effective but is inefficient','It works only for medical students','It was recommended by Ebbinghaus'],a:1,ex:'It feels effective ... least efficient.'},
+   {q:'What does the professor advise students to do?',o:['Study for five hours the night before','Review material only once','Spread their studying over several days','Learn lists of nonsense syllables'],a:2,ex:'one hour on five different days.'}
+  ]}
+],
+BS:[
+ {v:'f',ctx:'Are you coming to the meeting tomorrow?',ans:['I will','be there','as soon as','my class','ends']},
+ {v:'m',ctx:'What did you think of the new café?',ans:['The coffee','was good','but the','prices were','too high']},
+ {v:'f',ctx:'How long have you lived here?',ans:['I have','lived in','this city','for about','three years']},
+ {v:'m',ctx:'Where did you find that old book?',ans:['I found','it in','a small','shop near','the station']},
+ {v:'f',ctx:'Why is the road closed today?',ans:['They are','repairing','the bridge','after last','week’s storm']}
+],
+EMAIL:{time:7*60,to:'Alex',subj:'Your birthday dinner',prompt:`<b>Your friend Alex has invited you to his birthday dinner this Saturday. You would like to go, but you have an important exam early on Monday morning.</b><br><br>Write an email to <b>Alex</b>. In your email, do the following:<ul style="margin:10px 22px;line-height:1.9"><li>Thank him for the invitation.</li><li>Explain your situation.</li><li>Suggest another way to celebrate together.</li></ul>Write as much as you can and in complete sentences.`},
+DISC:{time:10*60,prof:'Professor Kim',q:'We have been studying how people learn new skills. Some people believe it is better to learn from a teacher or an expert, while others believe people learn best by trying things on their own and making mistakes. Which approach do you think is more effective, and why?',
+ posts:[{n:'Maya',av:'👩',t:'Learning from an expert saves a lot of time. A good teacher can show you the right way from the beginning, so you do not develop bad habits.'},
+        {n:'Daniel',av:'👨',t:'I learn best by doing things myself. When I make a mistake and fix it on my own, I understand the skill more deeply and remember it longer.'}]},
+LR:['Welcome to the university library orientation.','Quiet study rooms are available on the third floor.','You can reserve a room online up to one week in advance.','Food is not allowed, but covered drinks are fine.','If you need help finding a book, please ask at the information desk.'],
+IV:['What kind of job would you like to have in the future, and why?','Do you think it is better to work for a large company or a small one? Why?','How do you usually prepare for an important exam or task?','What is one piece of advice you would give to a new university student?']
+};
+
+const FORMS=[{CW,DAILY,ACAD,LCR,LISTEN,BS,EMAIL,DISC,LR,IV},F2,F3];
+
+const DIRS={
+ 'Complete the Words':['📝','Fill in the missing letters to complete the words in the paragraph.'],
+ 'Read in Daily Life':['📨','Read a short text from everyday life, such as an email or a notice, and answer the questions.'],
+ 'Read an Academic Passage':['📚','Read an academic passage and answer the questions about it.'],
+ 'Listen and Choose a Response':['💬','You will hear a person speak. Choose the best response. You will hear each item only once.'],
+ 'Listen to a Conversation':['👥','You will hear a conversation. Then answer the questions. You will hear it only once.'],
+ 'Listen to an Announcement':['📢','You will hear an announcement. Then answer the questions. You will hear it only once.'],
+ 'Listen to an Academic Talk':['🎓','You will hear part of a talk in an academic setting. Then answer the questions. You will hear it only once.'],
+ 'Build a Sentence':['🧩','Put the words in the correct order to make a sentence that responds to the context. You have 60 seconds for each item.'],
+ 'Write an Email':['✉️','You will read a situation and write an email. You have 7 minutes.'],
+ 'Write for an Academic Discussion':['🗣️','A professor has posted a question and two students have responded. Write a response that contributes to the discussion. You have 10 minutes. An effective response contains at least 100 words.'],
+ 'Listen and Repeat':['🔁','You will hear a sentence. Repeat it exactly as you hear it. Your response will be recorded automatically.'],
+ 'Take an Interview':['🧑‍💼','An interviewer will ask you questions. You will have 45 seconds to answer each question. Your response will be recorded automatically.']
+};
+
+/* =====================================================
+   HELPERS
+===================================================== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=s=>{s=Math.max(0,s|0);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function show(id){if(id==='home'&&window.drawForms)setTimeout(drawForms,0);['home','test','res'].forEach(x=>$('#'+x).classList.toggle('hidden',x!==id));window.scrollTo(0,0)}
+function modal(text,btns){$('#mtext').innerHTML=text;const b=$('#mbtns');b.innerHTML='';btns.forEach(([l,c,f])=>{const e=document.createElement('button');e.textContent=l;e.style.background=c;e.style.color=c==='#e3e8ee'?'#333':'#fff';e.onclick=()=>{$('#modal').classList.add('hidden');f&&f()};b.appendChild(e)});$('#modal').classList.remove('hidden')}
+const store={get(){try{return JSON.parse(localStorage.getItem('threshold_hist')||'[]')}catch(e){return[]}},add(r){try{const h=this.get();h.unshift(r);localStorage.setItem('threshold_hist',JSON.stringify(h.slice(0,30)))}catch(e){}}};
+
+/* ===== Text to Speech (improved) ===== */
+let voices=[],spkTok=0;
+const VSET_KEY='threshold_voice';
+function vset(){try{return Object.assign({f:'',m:'',rate:.9},JSON.parse(localStorage.getItem(VSET_KEY)||'{}'))}catch(e){return{f:'',m:'',rate:.9}}}
+function saveVset(o){try{localStorage.setItem(VSET_KEY,JSON.stringify(o))}catch(e){}}
+const FEM=/female|woman|samantha|zira|susan|karen|victoria|aria|jenny|emma|libby|sonia|michelle|ava\b|allison|joanna|salli|kendra|kimberly|ivy|serena|moira|tessa|fiona|natasha|clara|-x-(sfg|iob|iog|tpc|tpf)|#female/i;
+const MAL=/\bmale\b|\bman\b|david|mark|daniel|alex\b|guy|ryan|george|fred|tom\b|aaron|christopher|eric|davis|tony|brian|matthew|joey|justin|oliver|thomas|william|-x-(iol|iom|tpd)|#male/i;
+function vScore(v){
+ let s=0;const n=v.name;
+ if(/natural|neural|online|enhanced|premium|wavenet/i.test(n))s+=60;
+ if(/google/i.test(n))s+=40;
+ if(/aria|jenny|guy|davis|samantha|ava|libby|ryan|sonia/i.test(n))s+=25;
+ if(/-local$/i.test(v.voiceURI||''))s+=35;else if(/network/i.test(v.voiceURI||''))s+=25;
+ if(v.q)s+=Math.min(v.q,500)/25;
+ if(!v.localService)s+=10;
+ if(/en[-_]US/i.test(v.lang))s+=20;else if(/en[-_]GB/i.test(v.lang))s+=15;else s+=5;
+ if(/espeak|robot|novelty|bad news|bells|whisper|zarvox|trinoids|albert|cellos|bubbles|boing|jester|organ|superstar|wobble|hysterical|pipe|junior|ralph|kathy|bahh/i.test(n))s-=200;
+ return s;
+}
+const AT=window.AndroidApp||null;   // جسر الصوت داخل تطبيق الأندرويد
+function loadV(){
+ try{
+  if(AT){voices=JSON.parse(AT.voices()||'[]').map(v=>({name:v.name,voiceURI:v.name,lang:v.lang,localService:v.local,q:v.q})).sort((a,b)=>vScore(b)-vScore(a));return}
+  voices=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang)).sort((a,b)=>vScore(b)-vScore(a));
+ }catch(e){}
+}
+if(AT){setTimeout(loadV,1500)}else if('speechSynthesis' in window){loadV();try{speechSynthesis.addEventListener('voiceschanged',loadV)}catch(e){speechSynthesis.onvoiceschanged=loadV}}
+function voiceBy(uri){return voices.find(v=>v.voiceURI===uri||v.name===uri)}
+function autoVoice(g){
+ if(!voices.length)return null;
+ const re=g==='f'?FEM:MAL,other=g==='f'?MAL:FEM;
+ return voices.find(v=>re.test(v.name+' '+v.voiceURI)&&!(g==='m'&&/female/i.test(v.name)))
+  ||voices.find(v=>!other.test(v.name+' '+v.voiceURI))||voices[0];
+}
+function pickVoice(g){
+ const st=vset();const chosen=st[g]&&voiceBy(st[g]);if(chosen)return chosen;
+ const v=autoVoice(g);
+ if(g==='m'){const f=pickVoice('f');if(f&&v===f){const alt=voices.find(x=>x!==f&&!FEM.test(x.name+' '+x.voiceURI));if(alt)return alt}}
+ return v;
+}
+function splitSent(t){return t.replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z"“‘'])/).map(s=>s.trim()).filter(Boolean)}
+/* يجمع الجمل في مقاطع كبيرة متصلة (لا تقطيع بين الجمل) */
+function chunkText(t,max){
+ const out=[];let cur='';
+ splitSent(t).forEach(s=>{if(cur&&(cur.length+s.length+1)>max){out.push(cur);cur=s}else cur=cur?cur+' '+s:s});
+ if(cur)out.push(cur);return out;
+}
+const IS_ANDROID=/android/i.test(navigator.userAgent);
+function unlockTTS(){try{if(AT){loadV();return}if(!('speechSynthesis' in window))return;loadV();const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}catch(e){}}
+function speakAndroid(lines,onEnd,onProg,tok){
+ if(!voices.length)loadV();
+ const st=vset(),fv=pickVoice('f'),mv=pickVoice('m'),same=!fv||!mv||fv===mv;
+ const chunks=[];lines.forEach(L=>chunkText(L.t,900).forEach(t=>chunks.push({v:L.v,t})));
+ let ended=0,finished=false,started=false,idle=0;
+ const total=chunks.reduce((n,c)=>n+c.t.length,0);
+ const finish=()=>{if(finished||tok!==spkTok)return;finished=true;clearInterval(poll);clearTimeout(safety);onEnd(true)};
+ window.__ttsEvt=(type,id)=>{const p=String(id).split('_');if(+p[0]!==tok)return;
+  if(type==='start'){started=true;onProg&&onProg(+p[1]+.5,chunks.length)}
+  else{ended++;onProg&&onProg(ended,chunks.length);if(ended>=chunks.length)finish()}};
+ chunks.forEach((C,i)=>{const v=C.v==='f'?fv:mv;
+  try{AT.speak(tok+'_'+i,C.t,v?v.name:'',st.rate,same?(C.v==='f'?1.08:.92):1,i===0)}catch(e){}});
+ const poll=setInterval(()=>{if(tok!==spkTok){clearInterval(poll);return}
+  let busy=false;try{busy=AT.speaking()}catch(e){}
+  if(busy){started=true;idle=0}else if(started&&++idle>=4)finish()},400);
+ const safety=setTimeout(finish,total*120/st.rate+8000);
+}
+function speak(lines,onEnd,onProg){
+ const tok=++spkTok;
+ if(AT){try{if(AT.ttsReady()){speakAndroid(lines,onEnd,onProg,tok);return}}catch(e){}setTimeout(()=>onEnd(false),300);return}
+ if(!('speechSynthesis' in window)){setTimeout(()=>onEnd(false),300);return}
+ if(!voices.length)loadV();
+ try{speechSynthesis.cancel()}catch(e){}
+ const st=vset(),fv=pickVoice('f'),mv=pickVoice('m'),same=fv&&mv&&fv===mv;
+ const desktopNet=!IS_ANDROID&&[fv,mv].some(v=>v&&!v.localService);
+ const max=desktopNet?220:600;          // مقاطع طويلة ومتصلة على الهاتف
+ const chunks=[];lines.forEach(L=>chunkText(L.t,max).forEach(t=>chunks.push({v:L.v,t})));
+ let ended=0,finished=false,started=false,idle=0;
+ const totalChars=chunks.reduce((n,c)=>n+c.t.length,0);
+ const finish=()=>{if(finished||tok!==spkTok)return;finished=true;clearInterval(poll);clearInterval(keep);clearTimeout(safety);onEnd(true)};
+ // نضع كل المقاطع في طابور المحرك دفعة واحدة، فيقرؤها متتابعة بلا فجوات
+ setTimeout(()=>{
+  if(tok!==spkTok)return;
+  chunks.forEach((C,i)=>{
+   const u=new SpeechSynthesisUtterance(C.t);
+   const v=C.v==='f'?fv:mv;if(v){u.voice=v;u.lang=v.lang}else u.lang='en-US';
+   u.rate=st.rate;u.pitch=same?(C.v==='f'?1.08:.92):1;u.volume=1;
+   u.onstart=()=>{started=true;onProg&&onProg(i+.5,chunks.length)};
+   u.onend=()=>{if(tok!==spkTok)return;ended++;onProg&&onProg(ended,chunks.length);if(ended>=chunks.length)finish()};
+   u.onerror=e=>{if(tok!==spkTok)return;if(e&&(e.error==='interrupted'||e.error==='canceled'))return;ended++;if(ended>=chunks.length)finish()};
+   try{speechSynthesis.speak(u)}catch(e){}
+  });
+ },350);
+ // احتياط: إذا لم يرسل المحرك إشارة الانتهاء، نراقب حالته
+ const poll=setInterval(()=>{
+  if(tok!==spkTok){clearInterval(poll);return}
+  const busy=speechSynthesis.speaking||speechSynthesis.pending;
+  if(busy){started=true;idle=0}else if(started&&++idle>=3)finish();
+ },400);
+ const safety=setTimeout(finish,totalChars*120/st.rate+8000);
+ // لمتصفحات الكمبيوتر فقط: منع توقف كروم بعد 15 ثانية
+ const keep=setInterval(()=>{if(desktopNet&&speechSynthesis.speaking){speechSynthesis.pause();speechSynthesis.resume()}},10000);
+}
+function stopAudio(){spkTok++;try{if(AT)AT.stop();else speechSynthesis.cancel()}catch(e){}}
+
+/* =====================================================
+   STATE & BUILD
+===================================================== */
+let S={};
+function build(sec){
+ const {CW,DAILY,ACAD,LCR,LISTEN,BS,EMAIL,DISC,LR,IV}=FORMS[S.form];
+ const s=[{type:'intro'}];let qn=0;
+ const dir=t=>s.push({type:'dir',task:t});
+ if(sec==='reading'){
+  dir('Complete the Words');
+  CW.forEach((p,k)=>{const blanks=[];let idx=0;const html=p.text.replace(/\{(\w+)\|(\w+)\}/g,(m,a,b)=>{blanks.push(b);const i=idx++;return `<span class="cw">${a}<input data-b="${i}" maxlength="${b.length}" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:${b.length*.72+.7}em"></span>`});s.push({type:'cw',task:'Complete the Words',id:'cw'+k,title:p.title,html,blanks,qn:++qn})});
+  dir('Read in Daily Life');
+  DAILY.forEach((d,k)=>d.qs.forEach((q,j)=>s.push({type:'rq',task:'Read in Daily Life',id:`d${k}${j}`,passage:d.html,...q,qn:++qn})));
+  dir('Read an Academic Passage');
+  ACAD.qs.forEach((q,j)=>s.push({type:'rq',task:'Read an Academic Passage',id:'a'+j,passage:ACAD.html,...q,qn:++qn}));
+ }
+ if(sec==='listening'){
+  dir('Listen and Choose a Response');
+  LCR.forEach((x,k)=>s.push({type:'lcr',task:'Listen and Choose a Response',id:'lc'+k,...x,qn:++qn}));
+  LISTEN.forEach((L,k)=>{dir(L.task);s.push({type:'audio',task:L.task,pic:L.pic,label:L.label,lines:L.lines});L.qs.forEach((q,j)=>s.push({type:'lq',task:L.task,id:`l${k}${j}`,pic:L.pic,...q,qn:++qn}))});
+ }
+ if(sec==='writing'){
+  dir('Build a Sentence');
+  BS.forEach((b,k)=>s.push({type:'bs',task:'Build a Sentence',id:'bs'+k,...b,order:shuffle(b.ans.map((_,i)=>i)),time:60,qn:++qn}));
+  dir('Write an Email');s.push({type:'email',task:'Write an Email',id:'em',time:EMAIL.time,qn:++qn});
+  dir('Write for an Academic Discussion');s.push({type:'disc',task:'Write for an Academic Discussion',id:'ds',time:DISC.time,qn:++qn});
+ }
+ if(sec==='speaking'){
+  dir('Listen and Repeat');
+  LR.forEach((t,k)=>s.push({type:'lr',task:'Listen and Repeat',id:'lr'+k,t,qn:++qn}));
+  dir('Take an Interview');
+  IV.forEach((q,k)=>s.push({type:'iv',task:'Take an Interview',id:'iv'+k,q,qn:++qn}));
+ }
+ s.total=qn;return s;
+}
+
+/* ===== Forms selector ===== */
+let selForm=0;
+function drawForms(){
+ const done=new Set(store.get().map(r=>r.form));
+ $('#forms').innerHTML=FORMS.map((_,i)=>`<button class="fchip${selForm===i?' on':''}" onclick="selForm=${i};drawForms()">نموذج ${i+1}<small>${done.has(i)?'✓ تم حلّه':'جديد'}</small></button>`).join('')+
+  `<button class="fchip${selForm==='r'?' on':''}" onclick="selForm='r';drawForms()">🎲<small>عشوائي</small></button>`;
+}
+/* ===== Student ===== */
+function getStudent(){try{return JSON.parse(localStorage.getItem('threshold_student')||'{}')}catch(e){return{}}}
+function saveStudent(){try{localStorage.setItem('threshold_student',JSON.stringify({name:$('#stName').value.trim(),phone:$('#stPhone').value.trim()}))}catch(e){}}
+function loadStudent(){const s=getStudent();$('#stName').value=s.name||'';$('#stPhone').value=s.phone||''}
+function waNum(p){
+ let d=(p||'').replace(/\D/g,'');
+ if(d.startsWith('00'))d=d.slice(2);
+ if(d.length===10&&d.startsWith('07'))d='962'+d.slice(1);   // 07XXXXXXXX (الأردن)
+ else if(d.length===9&&d.startsWith('7'))d='962'+d;          // 7XXXXXXXX
+ else if(d.startsWith('0'))d='962'+d.slice(1);
+ return d;
+}
+function startTest(keys,mode){
+ const name=$('#stName').value.trim(),phone=$('#stPhone').value.trim();
+ if(!name||waNum(phone).length<10){
+  modal('من فضلك أدخل <b>اسم الطالب</b> و<b>رقم واتساب صحيح</b> قبل بدء الاختبار.',[['حسنًا','#0f7c8c',()=>{show('home');(name?$('#stPhone'):$('#stName')).focus()}]]);return}
+ saveStudent();unlockTTS();
+ const form=selForm==='r'?Math.floor(Math.random()*FORMS.length):selForm;
+ S={keys,mode,form,k:0,ans:{},results:{},hideTime:false,student:{name,phone}};
+ show('test');startSection();
+}
+function startSection(){
+ const sec=S.keys[S.k];S.sec=sec;S.screens=build(sec);S.i=0;S.secLeft=META[sec].time;S.secRun=false;
+ clearInterval(S.secT);$('#secName').textContent=META[sec].name;
+ if(sec==='speaking')initMic();
+ render();
+}
+const cur=()=>S.screens[S.i];
+
+/* =====================================================
+   RENDER
+===================================================== */
+function render(){
+ clearInterval(S.scrT);stopAudio();stopRec(true);
+ const sc=cur(),st=$('#stage'),m=META[S.sec];
+ $('#taskName').textContent=sc.task||(m.name+' Section');
+ $('#qCount').textContent=sc.qn?`Question ${sc.qn} of ${S.screens.total}`:'';
+ $('#btnBack').classList.toggle('hidden',!(S.sec==='reading'&&S.i>1));
+ $('#btnNext').textContent=sc.type==='intro'?'Begin':(S.i===S.screens.length-1?'Finish':'Next');
+ setNext(true);
+ if(sc.type!=='intro'&&m.time&&!S.secRun)startSecTimer();
+ S.scrLeft=sc.time||0;
+ if(sc.time){S.scrT=setInterval(()=>{S.scrLeft--;updTimer();if(S.scrLeft<=0){clearInterval(S.scrT);forceNext()}},1000)}
+ updTimer();
+ const R={intro:rIntro,dir:rDir,cw:rCW,rq:rRQ,lcr:rLCR,audio:rAudio,lq:rLQ,bs:rBS,email:rEmail,disc:rDisc,lr:rSpeak,iv:rSpeak}[sc.type];
+ R(sc,st);window.scrollTo(0,0);
+}
+function setNext(on){$('#btnNext').disabled=!on}
+function updTimer(){
+ const t=$('#timer');
+ if(S.hideTime){t.textContent='';return}
+ const v=S.scrLeft>0?S.scrLeft:(S.secRun?S.secLeft:-1);
+ t.textContent=v<0?'--:--':fmt(v);t.classList.toggle('warn',v>=0&&v<=(S.scrLeft>0?15:60));
+}
+function toggleTime(){S.hideTime=!S.hideTime;$('#btnTime').textContent=S.hideTime?'Show Time':'Hide Time';updTimer()}
+function startSecTimer(){S.secRun=true;clearInterval(S.secT);S.secT=setInterval(()=>{S.secLeft--;updTimer();if(S.secLeft<=0){clearInterval(S.secT);modal('⏰ انتهى وقت هذا القسم.',[['متابعة','#0f7c8c',endSection]])}},1000)}
+
+function rIntro(sc,st){const m=META[S.sec];
+ st.innerHTML=`<div class="dir"><div class="ic">${m.icon}</div><h2>${m.name} Section</h2>
+ <p>In this section, you will complete the following tasks:</p><ul class="tasks">${m.tasks.map(t=>`<li>${t}</li>`).join('')}</ul><br>
+ <span class="meta">${m.time?'Time: '+(m.time/60)+' minutes':'Each task is timed separately'} • ${S.screens.total} questions</span>
+ ${S.sec==='listening'?'<p style="margin-top:16px">🎧 Please put on your headphones and adjust the volume.</p>':''}
+ ${S.sec==='speaking'?'<p style="margin-top:16px">🎙️ Please allow microphone access when asked.</p>':''}
+ <p style="margin-top:18px;color:#7a8696">Click <b>Begin</b> to start.</p></div>`}
+function rDir(sc,st){const[d,t]=DIRS[sc.task];st.innerHTML=`<div class="dir"><div class="ic">${d}</div><h2>${sc.task}</h2><p>${t}</p><p style="margin-top:18px;color:#7a8696">Click <b>Next</b> to continue.</p></div>`}
+
+function rCW(sc,st){
+ st.innerHTML=`<div class="panel center"><div class="qtext">Fill in the missing letters in the paragraph.</div><h4 style="margin-bottom:10px">${sc.title}</h4><div class="cwp">${sc.html}</div></div>`;
+ const saved=S.ans[sc.id]||[];
+ st.querySelectorAll('input').forEach(inp=>{const b=+inp.dataset.b;inp.value=saved[b]||'';inp.oninput=()=>{const a=S.ans[sc.id]||[];a[b]=inp.value.trim();S.ans[sc.id]=a;if(inp.value.length>=inp.maxLength){const all=[...st.querySelectorAll('input')];const n=all[all.indexOf(inp)+1];n&&n.focus()}}});
+}
+function opts(sc,box){
+ box.innerHTML=sc.o.map((o,i)=>`<div class="opt${S.ans[sc.id]===i?' sel':''}" data-i="${i}"><span class="dot"></span><span>${esc(o)}</span></div>`).join('');
+ box.querySelectorAll('.opt').forEach(e=>e.onclick=()=>{S.ans[sc.id]=+e.dataset.i;box.querySelectorAll('.opt').forEach(x=>x.classList.toggle('sel',x===e))});
+}
+function rRQ(sc,st){
+ let p=sc.passage;if(sc.hl)p=p.replace(sc.hl,`<mark>${sc.hl}</mark>`);
+ st.innerHTML=`<div class="split"><div class="panel passage">${p}</div><div class="panel"><div class="qtext">${esc(sc.q)}</div><div id="ops"></div></div></div>`;
+ opts(sc,$('#ops'));
+ const mk=st.querySelector('mark');if(mk)setTimeout(()=>mk.scrollIntoView({block:'center'}),100);
+}
+function audioUI(st,pic,label,extra){
+ st.innerHTML=`<div class="audio"><div class="pic">${pic}</div><div class="alabel">${label}</div><div class="astat" id="ast">🔊 Listening…</div><div class="bar"><i id="abar"></i></div><div id="after"></div>${extra||''}</div>`;
+}
+function playLines(lines,done){
+ speak(lines,ok=>{$('#abar')&&($('#abar').style.width='100%');done(ok)},(k,n)=>{const b=$('#abar');if(b)b.style.width=(k/n*100)+'%'});
+}
+function transBtn(lines){S.trans=lines;return `<button class="trans" onclick="showTrans(this)">Trouble hearing? Show transcript</button>`}
+function showTrans(b){b.outerHTML='<div class="tbox">'+S.trans.map(l=>esc(l.t)).join('<br><br>')+'</div>'}
+function rLCR(sc,st){
+ setNext(false);
+ audioUI(st,sc.v==='f'?'👩':'👨','Listen and choose the best response');
+ const lines=[{v:sc.v,t:sc.t}];
+ playLines(lines,ok=>{
+  $('#ast').textContent=ok?'Choose the best response.':'Audio is not available on this device.';
+  $('#after').innerHTML=`<div class="center" style="text-align:left;margin-top:20px"><div id="ops"></div></div>${transBtn(lines)}`;
+  opts(sc,$('#ops'));setNext(true);
+ });
+}
+function rAudio(sc,st){
+ setNext(false);audioUI(st,sc.pic,sc.label);
+ playLines(sc.lines,ok=>{$('#ast').textContent=ok?'✔ The audio has ended. Click Next to answer the questions.':'Audio is not available on this device.';$('#after').innerHTML=transBtn(sc.lines);setNext(true)});
+}
+function rLQ(sc,st){st.innerHTML=`<div class="panel center"><div style="font-size:40px;text-align:center">${sc.pic}</div><div class="qtext" style="margin-top:10px">${esc(sc.q)}</div><div id="ops"></div></div>`;opts(sc,$('#ops'))}
+
+function rBS(sc,st){
+ if(!S.ans[sc.id])S.ans[sc.id]=[];
+ const draw=()=>{
+  const picked=S.ans[sc.id];
+  st.innerHTML=`<div class="panel center"><div class="qtext">Make an appropriate sentence.</div>
+  <div class="ctx"><div class="av">${sc.v==='f'?'👩':'👨'}</div><div class="bubble">${esc(sc.ctx)}</div></div>
+  <div class="ctx" style="flex-direction:row-reverse"><div class="av">🙂</div><div style="flex:1"><div class="ansArea" id="area">${picked.map(i=>`<span class="tile" data-i="${i}">${esc(sc.ans[i])}</span>`).join('')}<b style="margin-left:auto">.</b></div></div></div>
+  <div class="bank">${sc.order.map(i=>`<span class="tile${picked.includes(i)?' used':''}" data-i="${i}">${esc(sc.ans[i])}</span>`).join('')}</div>
+  <p style="font-size:13px;color:#7a8696;margin-top:14px">Tap a word to place it. Tap a placed word to remove it.</p></div>`;
+  st.querySelectorAll('.bank .tile').forEach(t=>t.onclick=()=>{const i=+t.dataset.i;if(!picked.includes(i)){picked.push(i);draw()}});
+  st.querySelectorAll('#area .tile').forEach(t=>t.onclick=()=>{const i=+t.dataset.i;S.ans[sc.id]=picked.filter(x=>x!==i);draw()});
+ };draw();
+}
+function writer(sc,min){
+ return `<textarea id="ta" placeholder="Type your response here…" spellcheck="false" autocorrect="off">${esc(S.ans[sc.id]||'')}</textarea><div class="wc"><span>Word Count: <b id="wcn">0</b></span><span>${min?'Recommended: '+min+'+ words':''}</span></div>`;
+}
+function bindTA(sc){const ta=$('#ta'),f=()=>{S.ans[sc.id]=ta.value;$('#wcn').textContent=(ta.value.match(/[A-Za-z0-9'’-]+/g)||[]).length};ta.oninput=f;f()}
+function rEmail(sc,st){const EMAIL=FORMS[S.form].EMAIL;st.innerHTML=`<div class="split"><div class="panel passage" style="line-height:1.75">${EMAIL.prompt}</div><div class="panel"><div style="font-size:14px;color:#596476;margin-bottom:8px"><b>To:</b> ${EMAIL.to}<br><b>Subject:</b> ${EMAIL.subj}</div>${writer(sc,100)}</div></div>`;bindTA(sc)}
+function rDisc(sc,st){const DISC=FORMS[S.form].DISC;
+ st.innerHTML=`<div class="split"><div class="panel passage"><div class="prof"><div class="av">👨‍🏫</div><div><div class="nm">${DISC.prof}</div><div class="tx">${DISC.q}</div></div></div><hr style="border:0;border-top:1px solid var(--line);margin:10px 0 14px">${DISC.posts.map(p=>`<div class="prof"><div class="av">${p.av}</div><div><div class="nm">${p.n}</div><div class="tx">${p.t}</div></div></div>`).join('')}</div><div class="panel">${writer(sc,100)}</div></div>`;bindTA(sc)}
+
+/* ===== Speaking ===== */
+let SR=window.SpeechRecognition||window.webkitSpeechRecognition,rec=null,recOn=false,recTxt='',mRec=null,chunks=[];
+function initMic(){
+ S.micMode=SR?'sr':(navigator.mediaDevices&&window.MediaRecorder?'rec':'none');
+ if(S.micMode==='rec'&&!S.stream){navigator.mediaDevices.getUserMedia({audio:true}).then(s=>S.stream=s).catch(()=>S.micMode='none')}
+}
+function rSpeak(sc,st){
+ setNext(false);const iv=sc.type==='iv';
+ st.innerHTML=`<div class="spk"><div class="avatar">${iv?'🧑‍💼':'🏫'}</div><div class="spkLabel">${iv?'Interviewer':'Campus Guide'}</div>${iv?`<div class="ivq hidden" id="ivq">${esc(sc.q)}</div>`:''}<div id="sst" class="sstat">🔊 Listen…</div><div id="live" class="live"></div><div id="sbox"></div></div>`;
+ speak([{v:iv?'m':'f',t:iv?sc.q:sc.t}],()=>{if(iv)$('#ivq').classList.remove('hidden');beginRec(sc,iv?45:12)});
+}
+function beginRec(sc,secs){
+ S.recSc=sc;S.scrLeft=secs;updTimer();
+ $('#sst').innerHTML=`<span class="recdot"></span>Recording… <span id="rsec">${fmt(secs)}</span>`;
+ $('#sbox').innerHTML=`<button class="stopb" onclick="finishRec()">■ Stop</button>`;
+ recTxt='';
+ if(S.micMode==='sr'){
+  try{
+   let finals='';rec=new SR();rec.lang='en-US';rec.continuous=true;rec.interimResults=true;
+   rec.onresult=e=>{let inter='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)finals+=e.results[i][0].transcript+' ';else inter+=e.results[i][0].transcript}recTxt=(finals+inter).trim();const l=$('#live');if(l)l.textContent=recTxt?'“'+recTxt+'”':''};
+   rec.onerror=()=>{};rec.onend=()=>{if(recOn)try{rec.start()}catch(e){}};
+   recOn=true;rec.start();
+  }catch(e){S.micMode='none'}
+ }else if(S.micMode==='rec'&&S.stream){
+  try{chunks=[];mRec=new MediaRecorder(S.stream);mRec.ondataavailable=e=>chunks.push(e.data);mRec.start();recOn=true}catch(e){}
+ }
+ clearInterval(S.scrT);
+ S.scrT=setInterval(()=>{S.scrLeft--;updTimer();const r=$('#rsec');if(r)r.textContent=fmt(S.scrLeft);if(S.scrLeft<=0)finishRec()},1000);
+}
+function stopRec(silent){recOn=false;try{rec&&rec.stop()}catch(e){}rec=null;try{if(mRec&&mRec.state!=='inactive'){if(silent)mRec.onstop=null;mRec.stop()}}catch(e){}}
+function finishRec(){
+ clearInterval(S.scrT);S.scrLeft=0;updTimer();const sc=S.recSc;const iv=sc.type==='iv';
+ const hadMR=S.micMode==='rec'&&mRec;
+ if(hadMR){mRec.onstop=()=>{const url=URL.createObjectURL(new Blob(chunks,{type:'audio/webm'}));const b=$('#sbox');if(b)b.insertAdjacentHTML('afterbegin',`<audio controls src="${url}" style="width:100%;margin:8px 0"></audio>`)}}
+ stopRec(false);
+ setTimeout(()=>{
+  const txt=recTxt.trim();S.ans[sc.id]={txt,self:null};
+  $('#sst').innerHTML='✔ Response recorded.';
+  if(txt){$('#sbox').innerHTML='';setNext(true);return}
+  $('#live').textContent='';
+  const opts=iv?[['1 Weak',1],['2',2],['3 OK',3],['4',4],['5 Excellent',5]]:[['Exactly',1],['Mostly',.65],['Partly',.35],['Could not',0]];
+  $('#sbox').innerHTML+=`<p style="margin-top:10px;font-size:14px;color:#596476;direction:rtl">لم يتمكن الجهاز من تحويل صوتك إلى نص. قيّم إجابتك بنفسك بصدق:</p><div class="rate">${opts.map(([l,v])=>`<button data-v="${v}">${l}</button>`).join('')}</div>`;
+  $('#sbox').querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{S.ans[sc.id].self=+b.dataset.v;$('#sbox').querySelectorAll('.rate button').forEach(x=>x.classList.toggle('on',x===b));setNext(true)});
+ },700);
+}
+
+/* ===== Navigation ===== */
+function next(){if($('#btnNext').disabled)return;if(S.between){S.between=false;startSection();return}if(S.i<S.screens.length-1){S.i++;render()}else endSection()}
+function forceNext(){if(S.i<S.screens.length-1){S.i++;render()}else endSection()}
+function back(){if(S.sec==='reading'&&S.i>1){S.i--;render()}}
+function askExit(){modal('هل تريد الخروج من الاختبار؟<br>لن تُحفظ النتيجة.',[['خروج','#d64545',()=>{cleanup();show('home')}],['متابعة','#e3e8ee']])}
+function cleanup(){clearInterval(S.secT);clearInterval(S.scrT);stopAudio();stopRec(true);try{S.stream&&S.stream.getTracks().forEach(t=>t.stop())}catch(e){}S.stream=null}
+function endSection(){
+ clearInterval(S.secT);clearInterval(S.scrT);stopAudio();stopRec(true);
+ S.results[S.sec]=score(S.sec);
+ if(S.k<S.keys.length-1){S.k++;const n=META[S.keys[S.k]];
+  $('#stage').innerHTML=`<div class="dir"><div class="ic">✅</div><h2>${META[S.sec].name} section complete</h2><p>Next: <b>${n.name}</b> section.</p></div>`;
+  $('#btnBack').classList.add('hidden');$('#btnNext').textContent='Continue';setNext(true);$('#qCount').textContent='';$('#taskName').textContent='';$('#timer').textContent='';
+  S.between=true;
+ }else{cleanup();showResults()}
+}
+
+/* =====================================================
+   SCORING
+===================================================== */
+const CONN=['however','therefore','for example','for instance','in addition','moreover','because','although','first','second','finally','also','on the other hand','as a result','in my opinion','i believe','furthermore','while','since','instead','in conclusion','personally','such as','unlike'];
+function rateText(t,target){
+ t=t||'';const w=(t.toLowerCase().match(/[a-z']+/g)||[]);const n=w.length;if(n<8)return n?.5:0;
+ let s=Math.min(n/target,1)*2;
+ const u=new Set(w).size/n;s+=u>.6?1:u>.45?.6:.3;
+ const low=' '+t.toLowerCase().replace(/[,.;!?]/g,' ')+' ';const c=CONN.filter(k=>low.includes(' '+k+' ')).length;s+=c>=3?1:c>=1?.5:0;
+ const sn=t.split(/[.!?]+/).filter(x=>x.trim().split(/\s+/).length>2);const avg=n/Math.max(sn.length,1);
+ s+=(sn.length>=3&&avg>=8&&avg<=28)?1:sn.length>=2?.5:.2;
+ return Math.min(5,Math.round(s*10)/10);
+}
+function rateEmail(t){let s=rateText(t,100);if(!/^\s*(dear|hi|hello|good)/i.test(t||''))s-=.5;if(!/(regards|sincerely|thank|best|cheers)/i.test(t||''))s-=.5;return Math.max(0,Math.min(5,s))}
+const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
+function sim(a,b){a=norm(a);b=norm(b);if(!b.length)return 0;const d=Array(a.length+1).fill(0).map(()=>Array(b.length+1).fill(0));for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=a[i-1]===b[j-1]?d[i-1][j-1]+1:Math.max(d[i-1][j],d[i][j-1]);return Math.min(1,d[a.length][b.length]/a.length)}
+const band=p=>Math.max(1,Math.min(6,Math.round((1+p*5)*2)/2));
+function score(sec){
+ const sc=S.screens,rv=[];let pct=0;
+ if(sec==='reading'||sec==='listening'){
+  let c=0,t=0;
+  sc.forEach(x=>{
+   if(x.type==='cw'){const a=S.ans[x.id]||[];let k=0;x.blanks.forEach((b,i)=>{t++;if((a[i]||'').toLowerCase()===b.toLowerCase()){c++;k++}});
+    rv.push({q:`Complete the Words — ${x.title}`,html:`Correct: <b>${k}/${x.blanks.length}</b><br>Answers: ${x.blanks.map((b,i)=>((a[i]||'').toLowerCase()===b.toLowerCase()?'<span class=ok>':'<span class=bad>')+b+'</span>').join(', ')}`})}
+   if(['rq','lcr','lq'].includes(x.type)){t++;const a=S.ans[x.id];const ok=a===x.a;if(ok)c++;
+    rv.push({q:x.type==='lcr'?'🔊 "'+x.t+'"':x.q,ok,your:a==null?'(no answer)':x.o[a],cor:x.o[x.a],ex:x.ex})}
+  });
+  pct=t?c/t:0;return{pct,band:band(pct),raw:`${c}/${t}`,rv};
+ }
+ if(sec==='writing'){
+  let bc=0,bn=0;
+  sc.filter(x=>x.type==='bs').forEach(x=>{bn++;const a=(S.ans[x.id]||[]);const ok=a.length===x.ans.length&&a.every((v,i)=>v===i);if(ok)bc++;
+   rv.push({q:'🧩 '+x.ctx,ok,your:a.length?a.map(i=>x.ans[i]).join(' ')+'.':'(no answer)',cor:x.ans.join(' ')+'.'})});
+  const em=rateEmail(S.ans.em),ds=rateText(S.ans.ds,100);
+  rv.push({q:'✉️ Write an Email',html:`Estimated score: <b>${em}/5</b> • Words: ${(S.ans.em||'').split(/\s+/).filter(Boolean).length}<div class="tbox">${esc(S.ans.em||'(empty)')}</div>`,ex:'التقييم آلي تقديري: الطول، تنوّع المفردات، أدوات الربط، بنية الجمل، التحية والختام.'});
+  rv.push({q:'🗣️ Academic Discussion',html:`Estimated score: <b>${ds}/5</b> • Words: ${(S.ans.ds||'').split(/\s+/).filter(Boolean).length}<div class="tbox">${esc(S.ans.ds||'(empty)')}</div>`,ex:'اذكر رأيك بوضوح، وأضف فكرة جديدة غير التي ذكرها الطالبان، وادعمها بمثال.'});
+  pct=(bc/bn)*.3+(em/5)*.35+(ds/5)*.35;return{pct,band:band(pct),raw:`Build ${bc}/${bn} • Email ${em}/5 • Discussion ${ds}/5`,rv};
+ }
+ if(sec==='speaking'){
+  const lr=[],iv=[];
+  sc.forEach(x=>{const a=S.ans[x.id]||{txt:'',self:null};
+   if(x.type==='lr'){const v=a.txt?sim(x.t,a.txt):(a.self??0);lr.push(v);rv.push({q:'🔁 '+x.t,html:`Accuracy: <b>${Math.round(v*100)}%</b>${a.txt?'<br>You said: <i>'+esc(a.txt)+'</i>':' (self-rated)'}`})}
+   if(x.type==='iv'){const v=a.txt?rateText(a.txt,70):(a.self??0);iv.push(v);rv.push({q:'🧑‍💼 '+x.q,html:`Estimated: <b>${v}/5</b>${a.txt?'<br>You said: <i>'+esc(a.txt)+'</i>':' (self-rated)'}`})}
+  });
+  const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
+  pct=avg(lr)*.5+avg(iv)/5*.5;return{pct,band:band(pct),raw:`Repeat ${Math.round(avg(lr)*100)}% • Interview ${avg(iv).toFixed(1)}/5`,rv};
+ }
+}
+const cefr=b=>b>=6?'C2':b>=5?'C1':b>=4?'B2':b>=3?'B1':b>=2?'A2':'A1';
+const OLD={1:'0–19',1.5:'20–29',2:'30–39',2.5:'40–52',3:'53–64',3.5:'65–77',4:'78–86',4.5:'87–94',5:'95–103',5.5:'104–113',6:'114–120'};
+const LVL={A1:'مبتدئ',A2:'أساسي',B1:'متوسط',B2:'فوق المتوسط',C1:'متقدم',C2:'متمكّن'};
+const TIPS={
+ reading:['ركّز على المفردات الأكاديمية الشائعة، واقرأ مقالًا علميًا قصيرًا يوميًا.','تدرّب على مهارة القراءة السريعة لاستخراج الفكرة الرئيسة ثم التفاصيل.','أنت قريب من مستوى القراءة الجامعية؛ ركّز على أسئلة الاستنتاج والغرض.'],
+ listening:['استمع يوميًا إلى بودكاست إنجليزي بطيء مع النص المكتوب.','دوّن ملاحظات مختصرة أثناء الاستماع: الفكرة، الأمثلة، النتيجة.','تدرّب على المحاضرات الأكاديمية وانتبه لكلمات الانتقال (first, however, finally).'],
+ writing:['راجع ترتيب الجملة الإنجليزية: الفاعل ثم الفعل ثم المفعول.','استخدم أدوات الربط ونوّع الجمل، واكتب أكثر من 100 كلمة.','أضف أمثلة شخصية ودعم واضح لرأيك، وراجع الأخطاء قبل انتهاء الوقت.'],
+ speaking:['كرّر الجمل بصوت عالٍ مع مقاطع قصيرة (shadowing).','تدرّب على الإجابة لمدة 45 ثانية: رأي + سبب + مثال.','ركّز على الطلاقة والنطق الطبيعي وتنويع المفردات.']
+};
+
+/* =====================================================
+   RESULTS
+===================================================== */
+function showResults(){
+ const ks=S.keys,bands=ks.map(k=>S.results[k].band);
+ const overall=Math.round(bands.reduce((a,b)=>a+b,0)/bands.length*2)/2;
+ const lv=cefr(overall);
+ S.msg=buildMsg(overall,lv);
+ const first=!S.saved;
+ if(!S.saved)store.add({d:new Date().toLocaleDateString('en-GB'),name:S.student.name,form:S.form,mode:S.mode,keys:ks,b:Object.fromEntries(ks.map(k=>[k,S.results[k].band])),o:overall});
+ S.saved=true;show('res');
+ $('#resBox').innerHTML=`<div class="brand"><h1 style="font-size:24px">${S.mode==='full'?'نتيجة الاختبار الكامل':'نتيجة قسم '+META[ks[0]].ar}</h1><div class="sub">نموذج ${S.form+1}</div></div>
+ <div class="ring" style="--p:${(overall-1)/5*100}%"><small>Overall</small><b>${overall.toFixed(1)}</b><small>من 6</small></div>
+ <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:6px">👤 ${esc(S.student.name)}</div>
+ <div class="tags"><span class="tag">مستوى CEFR: <b>${lv}</b> (${LVL[lv]})</span>${S.mode==='full'?`<span class="tag">يقابل تقريبًا ${OLD[overall]} من 120 (النظام القديم)</span>`:''}</div>
+ <div class="card">${ks.map(k=>{const r=S.results[k],m=META[k];const ti=TIPS[k][r.band<3?0:r.band<4.5?1:2];return `<div class="secr"><div class="ic">${m.icon}</div><div class="nm"><b>${m.ar}</b> <span style="opacity:.6;font-size:12px">${m.name}</span><div class="mbar"><i style="width:${(r.band-1)/5*100}%"></i></div><small>${r.raw}<br>💡 ${ti}</small></div><div class="bd">${r.band.toFixed(1)}</div></div>`}).join('')}</div>
+ <div class="sent" id="sentNote">📤 جارٍ فتح واتساب لإرسال النتيجة إلى رقم الطالب ${esc(S.student.phone)}… اضغط «إرسال» داخل واتساب.</div>
+ <button class="wabtn" onclick="sendToStudent()">💬 إرسال النتيجة إلى واتساب الطالب</button>
+ <button class="wabtn" style="background:#128c7e" onclick="shareWA()">📲 إرسال النتيجة إلى رقم آخر (معلم / ولي أمر)</button>
+ <button class="big" onclick="showReview()">📋 مراجعة الإجابات</button>
+ <div class="row" style="margin-top:12px"><button class="sbtn" onclick="startTest(S.keys,S.mode)">🔄 أعد الاختبار</button><button class="sbtn" onclick="show('home')">🏠 الرئيسية</button></div>
+ <div class="disc">الدرجة تقديرية لأغراض التدريب، والكتابة والمحادثة مقيّمتان آليًا بشكل تقريبي.</div>`;
+ if(first)setTimeout(autoSend,1200);else{const n=$('#sentNote');n&&n.remove()}
+}
+function buildMsg(o,lv){
+ const L=['*نتيجة اختبار «على أعتاب التوفل» – Threshold*','',
+  '👤 الطالب: '+S.student.name,'📅 التاريخ: '+new Date().toLocaleDateString('en-GB'),
+  '📝 النوع: '+(S.mode==='full'?'اختبار كامل':'قسم '+META[S.keys[0]].ar)+' – نموذج '+(S.form+1),'',
+  '⭐ الدرجة الكلية: *'+o.toFixed(1)+' / 6*','🎯 المستوى: '+lv+' ('+LVL[lv]+')'];
+ if(S.mode==='full')L.push('📊 يقابل تقريبًا: '+OLD[o]+' من 120');
+ L.push('');S.keys.forEach(k=>L.push(META[k].icon+' '+META[k].ar+' ('+META[k].name+'): '+S.results[k].band.toFixed(1)+' / 6'));
+ L.push('','الدرجة تقديرية لأغراض التدريب.','تطوير: Dahshan Soft','🌐 dahshansoft.com');
+ return L.join('\n');
+}
+function openWA(url){
+ if(AT){try{AT.openUrl(url);return true}catch(e){}}
+ const w=window.open(url,'_blank');
+ if(!w)location.href=url;
+ return w;
+}
+function sendToStudent(){openWA('https://wa.me/'+waNum(S.student.phone)+'?text='+encodeURIComponent(S.msg))}
+function shareWA(){openWA('https://wa.me/?text='+encodeURIComponent(S.msg))}
+function autoSend(){
+ const url='https://wa.me/'+waNum(S.student.phone)+'?text='+encodeURIComponent(S.msg);
+ let w=null;try{w=AT?(AT.openUrl(url),true):window.open(url,'_blank')}catch(e){}
+ const n=$('#sentNote');
+ if(n)n.innerHTML=w?'✅ تم فتح واتساب برسالة النتيجة إلى رقم الطالب. اضغط «إرسال» داخل واتساب لإتمام الإرسال.':'⚠️ لم يُفتح واتساب تلقائيًا. اضغط الزر الأخضر بالأسفل لإرسال النتيجة.';
+}
+function showReview(){
+ $('#resBox').innerHTML=`<div class="brand"><h1 style="font-size:24px">مراجعة الإجابات</h1></div>
+ ${S.keys.map(k=>`<div class="card"><h3>${META[k].icon} ${META[k].ar}</h3>${S.results[k].rv.map(r=>`<div class="rv"><div class="q">${r.q}</div>${r.html?r.html:`Your answer: <span class="${r.ok?'ok':'bad'}">${esc(r.your)} ${r.ok?'✔':'✘'}</span>${r.ok?'':'<br>Correct: <span class="ok">'+esc(r.cor)+'</span>'}`}${r.ex?`<div class="ex">${r.ex}</div>`:''}</div>`).join('')}</div>`).join('')}
+ <button class="big" onclick="showResults2()">⬅ العودة إلى النتيجة</button>`;
+ window.scrollTo(0,0);
+}
+function showResults2(){S.saved=true;showResults()}
+function showHistory(){
+ const h=store.get();show('res');
+ $('#resBox').innerHTML=`<div class="brand"><h1 style="font-size:24px">📊 سجل نتائجي</h1></div><div class="card hist">${h.length?h.map(r=>`<div><span>${r.d}${r.name?' • '+esc(r.name):''} • ${r.mode==='full'?'اختبار كامل':META[r.keys[0]].ar}${r.form!=null?' • ن'+(r.form+1):''}</span><b style="color:var(--gold)">${r.o.toFixed(1)} • ${cefr(r.o)}</b></div>`).join(''):'<p style="text-align:center;opacity:.7">لا توجد نتائج بعد. ابدأ أول اختبار!</p>'}</div><button class="big" onclick="show('home')">🏠 الرئيسية</button>`;
+}
+function showVoice(){
+ loadV();const st=vset();show('res');
+ const opt=g=>`<option value="">تلقائي (أفضل صوت متاح)</option>`+voices.map(v=>`<option value="${esc(v.voiceURI)}"${st[g]===v.voiceURI?' selected':''}>${esc(v.name)} (${v.lang})${/natural|neural|online|google|enhanced|premium/i.test(v.name)?' ⭐':''}</option>`).join('');
+ $('#resBox').innerHTML=`<div class="brand"><h1 style="font-size:24px">🔊 إعدادات الصوت</h1><div class="sub">اختر أوضح صوت متوفر في جهازك لقسمي الاستماع والمحادثة</div></div>
+ <div class="card">
+  ${voices.length?'':'<p style="color:#ffb4b4;margin-bottom:10px">⚠️ لم يُعثر على أصوات إنجليزية في الجهاز. اتبع الإرشادات بالأسفل.</p>'}
+  <h3>👩 صوت المتحدثة (أنثى)</h3><select class="fin" id="vf" style="direction:ltr">${opt('f')}</select>
+  <button class="sbtn" style="width:100%;margin-bottom:16px" onclick="testV('f')">▶️ تجربة صوت الأنثى</button>
+  <h3>👨 صوت المتحدث (ذكر)</h3><select class="fin" id="vm" style="direction:ltr">${opt('m')}</select>
+  <button class="sbtn" style="width:100%;margin-bottom:16px" onclick="testV('m')">▶️ تجربة صوت الذكر</button>
+  <h3>⏱️ سرعة الكلام: <span id="rv">${st.rate.toFixed(2)}</span></h3>
+  <input type="range" id="vr" min="0.6" max="1.2" step="0.05" value="${st.rate}" style="width:100%;direction:ltr" oninput="$('#rv').textContent=(+this.value).toFixed(2)">
+  <div style="display:flex;justify-content:space-between;font-size:12px;opacity:.7;direction:ltr"><span>أبطأ 🐢</span><span>🐇 أسرع</span></div>
+ </div>
+ <button class="big" onclick="saveVoice()">💾 حفظ الإعدادات</button>
+ <div class="card info" style="margin-top:14px"><h3>💡 للحصول على صوت طبيعي وواضح</h3>
+ <ul><li>الأصوات المميزة بـ ⭐ هي الأعلى جودة.</li>
+ <li>على أندرويد: ثبّت أو حدّث تطبيق <b>Speech Recognition &amp; Synthesis by Google</b> من Google Play.</li>
+ <li>ثم من الإعدادات ← الإدارة العامة ← اللغة ← <b>تحويل النص إلى كلام</b>: اختر محرك Google، واضغط ⚙️ ← تثبيت البيانات الصوتية ← English (United States)، ونزّل الصوت <b>عالي الجودة</b>.</li>
+ <li>على الكمبيوتر: متصفح Edge يوفّر أصوات Microsoft Natural الطبيعية جدًا.</li></ul></div>
+ <button class="sbtn" style="width:100%" onclick="show('home')">🏠 الرئيسية</button>`;
+}
+function curVset(){return{f:$('#vf').value,m:$('#vm').value,rate:+$('#vr').value}}
+function testV(g){const old=vset();saveVset(curVset());speak([{v:g,t:g==='f'?'Hello! Welcome to the campus tour. The library is located across from the main gate.':'Good morning, everyone. Today we are going to talk about how migrating birds find their way.'}],()=>{});saveVset(old)}
+function saveVoice(){saveVset(curVset());stopAudio();modal('✅ تم حفظ إعدادات الصوت.',[['حسنًا','#0f7c8c',()=>show('home')]])}
+function showAbout(){
+ show('res');
+ $('#resBox').innerHTML=`<div class="brand"><h1 style="font-size:24px">ℹ️ عن الاختبار</h1></div>
+ <div class="card info"><h3>نظام الاختبار</h3>يحاكي «على أعتاب التوفل» هيكل اختبار TOEFL iBT المحدّث (2026):
+ <ul style="margin-top:8px"><li><b>القراءة:</b> إكمال الكلمات، القراءة في الحياة اليومية، نص أكاديمي.</li><li><b>الاستماع:</b> اختيار الرد المناسب، محادثة، إعلان، محاضرة أكاديمية.</li><li><b>الكتابة:</b> بناء جملة، كتابة بريد إلكتروني، مشاركة في نقاش أكاديمي.</li><li><b>المحادثة:</b> الاستماع والتكرار، مقابلة.</li></ul></div>
+ <div class="card info"><h3>الدرجات</h3>كل قسم يُقيَّم من 1 إلى 6 بخطوات نصف درجة، والدرجة الكلية هي متوسط الأقسام، وتقابل مستويات CEFR:<br>6 = C2 • 5 = C1 • 4 = B2 • 3 = B1 • 2 = A2 • 1 = A1</div>
+ <div class="card info"><h3>ملاحظات</h3>الاستماع يعمل بمحرك نطق الجهاز. إذا لم يظهر صوت ففعّل «تحويل النص إلى كلام» باللغة الإنجليزية من إعدادات الهاتف.<br>المحادثة تستخدم التعرف على الكلام إن توفر، وإلا تسجّل صوتك وتقيّم نفسك.</div>
+ <button class="big" onclick="show('home')">🏠 الرئيسية</button>`;
+}
+loadStudent();drawForms();
+/* ===== Web app / APK ===== */
+if(AT){$('#getApp').remove()}
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e});
+function installPWA(){
+ if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null;return}
+ const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+ modal(ios?'على الآيفون: افتح الموقع في <b>Safari</b> ← اضغط زر المشاركة ⬆️ ← <b>إضافة إلى الشاشة الرئيسية</b>.':'من قائمة المتصفح ⋮ اختر <b>تثبيت التطبيق</b> أو <b>إضافة إلى الشاشة الرئيسية</b>.',[['حسنًا','#0f7c8c']]);
+}
+if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+/* زر الرجوع في الأندرويد */
+window.__back=function(){
+ if(!$('#modal').classList.contains('hidden')){$('#modal').classList.add('hidden');return 'stay'}
+ if(!$('#test').classList.contains('hidden')){askExit();return 'stay'}
+ if(!$('#res').classList.contains('hidden')){show('home');return 'stay'}
+ return 'exit';
+};
+</script>
+</body>
+</html>
