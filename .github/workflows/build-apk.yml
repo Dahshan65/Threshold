@@ -16,15 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Find project folder
-        run: |
-          ROOT=$(dirname "$(find . -path ./node_modules -prune -o -name settings.gradle -path '*android*' -print | head -n 1)")
-          ROOT=$(dirname "$ROOT")
-          echo "Project root: $ROOT"
-          ls -la "$ROOT"
-          test -f "$ROOT/index.html" || { echo "index.html not found next to the android folder"; exit 1; }
-          echo "ROOT=$ROOT" >> $GITHUB_ENV
-
       - name: Set up Java 17
         uses: actions/setup-java@v5
         with:
@@ -41,30 +32,117 @@ jobs:
         with:
           gradle-version: '8.7'
 
-      - name: Copy the web app into the Android project
+      # يبني مشروع الأندرويد في مجلد نظيف مهما كان مكان الملفات في المستودع
+      - name: Prepare Android project
         run: |
-          mkdir -p "$ROOT/android/app/src/main/assets"
-          cp "$ROOT/index.html" "$ROOT/android/app/src/main/assets/"
-          ls -la "$ROOT/android/app/src/main/assets"
+          set -e
+          B=$RUNNER_TEMP/apk
+          rm -rf $B
+          mkdir -p $B/app/src/main/assets $B/app/src/main/java/com/dahshansoft/threshold $B/app/src/main/res
+
+          MANIFEST=$(find . -name AndroidManifest.xml -not -path './.git/*' | head -n 1)
+          JAVA=$(find . -name MainActivity.java -not -path './.git/*' | head -n 1)
+          INDEX=$(find . -maxdepth 3 -name index.html -not -path './.git/*' -not -path '*/assets/*' | head -n 1)
+          KEY=$(find . -name threshold.keystore -not -path './.git/*' | head -n 1)
+          echo "Manifest: $MANIFEST"; echo "Java: $JAVA"; echo "Index: $INDEX"; echo "Keystore: $KEY"
+          test -n "$MANIFEST" || { echo "AndroidManifest.xml not found"; exit 1; }
+          test -n "$JAVA"     || { echo "MainActivity.java not found"; exit 1; }
+          test -n "$INDEX"    || { echo "index.html not found"; exit 1; }
+
+          cp "$MANIFEST" $B/app/src/main/AndroidManifest.xml
+          cp "$JAVA" $B/app/src/main/java/com/dahshansoft/threshold/MainActivity.java
+          cp "$INDEX" $B/app/src/main/assets/index.html
+          RES=$(dirname "$MANIFEST")/res
+          if [ -d "$RES" ]; then cp -r "$RES"/. $B/app/src/main/res/; fi
+          for d in $(find . -type d -name 'mipmap-*' -not -path './.git/*'); do
+            mkdir -p $B/app/src/main/res/$(basename $d); cp -n $d/* $B/app/src/main/res/$(basename $d)/ || true
+          done
+          ls -R $B/app/src/main/res
+
+          if [ -n "$KEY" ]; then cp "$KEY" $B/app/threshold.keystore
+          else
+            echo "Keystore not found - creating a new one"
+            keytool -genkeypair -keystore $B/app/threshold.keystore -alias threshold -keyalg RSA -keysize 2048 -validity 10000 -storepass dahshansoft -keypass dahshansoft -dname "CN=Dahshan Soft, O=Dahshan Soft, C=JO"
+          fi
+
+          cat > $B/settings.gradle <<'EOF'
+          pluginManagement {
+              repositories { google(); mavenCentral(); gradlePluginPortal() }
+          }
+          dependencyResolutionManagement {
+              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+              repositories { google(); mavenCentral() }
+          }
+          rootProject.name = "Threshold"
+          include ':app'
+          EOF
+
+          cat > $B/build.gradle <<'EOF'
+          plugins {
+              id 'com.android.application' version '8.5.2' apply false
+          }
+          EOF
+
+          cat > $B/gradle.properties <<'EOF'
+          org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+          android.useAndroidX=true
+          android.nonTransitiveRClass=true
+          EOF
+
+          cat > $B/app/build.gradle <<'EOF'
+          plugins {
+              id 'com.android.application'
+          }
+          android {
+              namespace 'com.dahshansoft.threshold'
+              compileSdk 34
+              defaultConfig {
+                  applicationId "com.dahshansoft.threshold"
+                  minSdk 24
+                  targetSdk 34
+                  versionCode 1
+                  versionName "1.0"
+              }
+              signingConfigs {
+                  dahshan {
+                      storeFile file('threshold.keystore')
+                      storePassword 'dahshansoft'
+                      keyAlias 'threshold'
+                      keyPassword 'dahshansoft'
+                  }
+              }
+              buildTypes {
+                  release {
+                      minifyEnabled false
+                      signingConfig signingConfigs.dahshan
+                  }
+              }
+              compileOptions {
+                  sourceCompatibility JavaVersion.VERSION_17
+                  targetCompatibility JavaVersion.VERSION_17
+              }
+          }
+          EOF
+          echo "B=$B" >> $GITHUB_ENV
 
       - name: Build APK
-        working-directory: ${{ env.ROOT }}/android
+        working-directory: ${{ env.B }}
         run: gradle assembleRelease --no-daemon --stacktrace
 
       - name: Copy APK
-        run: cp "$ROOT/android/app/build/outputs/apk/release/app-release.apk" "$ROOT/Threshold.apk"
+        run: cp "$B/app/build/outputs/apk/release/app-release.apk" Threshold.apk
 
       - name: Upload APK (download from Actions page)
         uses: actions/upload-artifact@v5
         with:
           name: Threshold-APK
-          path: ${{ env.ROOT }}/Threshold.apk
+          path: Threshold.apk
 
       - name: Put the APK on the website
         continue-on-error: true
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "$ROOT/Threshold.apk"
+          git add Threshold.apk
           git commit -m "Update Threshold.apk [skip ci]" || echo "No changes"
           git push
