@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dahshansoft.threshold'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.dahshansoft.threshold"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        dahshan {
+            storeFile file('threshold.keystore')
+            storePassword 'dahshansoft'
+            keyAlias 'threshold'
+            keyPassword 'dahshansoft'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.dahshan
+        }
+        debug {
+            signingConfig signingConfigs.dahshan
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
